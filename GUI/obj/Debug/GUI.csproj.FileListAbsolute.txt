@@ -1,0 +1,17 @@
+D:\hoc\HotelManager\GUI\bin\Debug\GUI.exe.config
+D:\hoc\HotelManager\GUI\bin\Debug\GUI.exe
+D:\hoc\HotelManager\GUI\bin\Debug\GUI.pdb
+D:\hoc\HotelManager\GUI\bin\Debug\BLL_DAL.dll
+D:\hoc\HotelManager\GUI\bin\Debug\LibraryCustomControl.dll
+D:\hoc\HotelManager\GUI\bin\Debug\BLL_DAL.pdb
+D:\hoc\HotelManager\GUI\bin\Debug\LibraryCustomControl.pdb
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.FormDangNhap.resources
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.FormMain.resources
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.FormMainS.resources
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.FormPhong.resources
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.exe
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.pdb
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.FormNhanVien.resources
+D:\hoc\HotelManager\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+D:\hoc\HotelManager\LibraryCustomControl\bin\Debug\LibraryCustomControl.dll
+D:\hoc\HotelManager\LibraryCustomControl\bin\Debug\LibraryCustomControl.pdb
+D:\hoc\HotelManager\LibraryCustomControl\obj\Debug\LibraryCustomControl.dll
+D:\hoc\HotelManager\LibraryCustomControl\obj\Debug\LibraryCustomControl.pdb
+D:\hoc\HotelManager\LibraryCustomControl\obj\Debug\LibraryCustomControl.csprojResolveAssemblyReference.cache

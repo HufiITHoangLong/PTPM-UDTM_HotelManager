@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HotelManager">
+  <DataContextMoniker Name="/HotelManagerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3244c8da-2408-4921-a823-36151172ec1b" absoluteBounds="0.75, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HotelManagerDataContext/LOAIPHONG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffad12dd-f03f-44bb-ae12-a98d94824d9c" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17522f38-d4c9-4725-a020-c1420da2281f" absoluteBounds="6, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HotelManagerDataContext/NHANVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="108f6bb6-4e49-493b-a6f4-3cdfbcf6306e" absoluteBounds="6.015, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23dd748a-80a9-4e99-9757-1291820f7501" absoluteBounds="3.375, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HotelManagerDataContext/PHONG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7413a5d8-74ed-4dbb-bbb1-fa35d28c4856" absoluteBounds="3.3899999999999997, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.91429768880208); (3.375 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelManagerDataContext/LOAIPHONG/LOAIPHONG_PHONG" />
+      <nodes>
+        <classShapeMoniker Id="3244c8da-2408-4921-a823-36151172ec1b" />
+        <classShapeMoniker Id="23dd748a-80a9-4e99-9757-1291820f7501" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

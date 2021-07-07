@@ -1,0 +1,5 @@
+D:\hoc\HotelManager\BLL_DAL\bin\Debug\BLL_DAL.dll.config
+D:\hoc\HotelManager\BLL_DAL\bin\Debug\BLL_DAL.dll
+D:\hoc\HotelManager\BLL_DAL\bin\Debug\BLL_DAL.pdb
+D:\hoc\HotelManager\BLL_DAL\obj\Debug\BLL_DAL.dll
+D:\hoc\HotelManager\BLL_DAL\obj\Debug\BLL_DAL.pdb
