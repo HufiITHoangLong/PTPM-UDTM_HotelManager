@@ -19,6 +19,7 @@ namespace GUI
 
         private void FormMainS_Load(object sender, EventArgs e)
         {
+            
             LabelXinChaoStaff.Text = "Staff";
             string[] thu = { "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy", "Chủ Nhật" };
             int ngay = DateTime.Now.DayOfWeek.GetHashCode();
@@ -30,6 +31,11 @@ namespace GUI
             this.Hide();
             FormPhong fp = new FormPhong();
             fp.ShowDialog();              
+        }
+
+        private void quảnLýPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

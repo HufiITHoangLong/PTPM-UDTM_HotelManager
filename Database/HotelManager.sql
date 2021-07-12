@@ -58,4 +58,27 @@ select TenLoaiPhong
 from LOAIPHONG
 WHERE MALOAIPHONG = 2
 
+Create table CT_NHANPHONG
+(
+	MAPHIEUNHAP char(10) not null,
+	TENKH nvarchar(50),
+	LOAIPHONG nvarchar(50),
+	CMND char (14),
+	GIOITINH nvarchar(6),
+	NGAYNHAN datetime,
+	NGAYTRA datetime,
+	GIAPHONG int,
+	MADV char(10),
+	TENDV nvarchar(50),
+	SOLUONGDV int
+	PRIMARY KEY(MAPHIEUNHAP),
+	Constraint FK_DV FOREIGN KEY (MADV) references DICHVU (MADV)
+)
 
+Create table DICHVU
+(
+	MADV char(10) not null,
+	TENDV nvarchar(50),
+	DONGIA int,
+	PRIMARY KEY (MADV)
+)

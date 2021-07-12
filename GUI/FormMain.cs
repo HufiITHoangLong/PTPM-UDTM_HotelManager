@@ -57,48 +57,86 @@ namespace GUI
             Application.Exit();
         }
 
-        private void BTNPhong_Click(object sender, EventArgs e)
+        
+
+        private void quảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormPhong fp = new FormPhong();
             fp.ShowDialog();
-           
         }
 
-        private void BTNKhachHang_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormKhachHang fkh = new FormKhachHang();
-            fkh.ShowDialog();
-        }
-
-        private void BTNDichVu_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormDichVu fdv = new FormDichVu();
-            fdv.ShowDialog();
-        }
-
-        private void BTNTrangThietBi_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormTThietBi ftt = new FormTThietBi();
-            ftt.ShowDialog();
-        }
-
-        private void BTNNhanVien_Click(object sender, EventArgs e)
+        private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormNhanVien fnv = new FormNhanVien();
             fnv.ShowDialog();
         }
 
-        private void BTNThongKe_Click(object sender, EventArgs e)
+        private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKhachHang fkh = new FormKhachHang();
+            fkh.ShowDialog();
+        }
+
+        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormThongKe ftk = new FormThongKe();
             ftk.ShowDialog();
         }
+
+        private void liênHệToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLienHe flh = new FormLienHe();
+            flh.ShowDialog();
+        }
+
+        private void btnTPT1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void btnTPV1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void btnTPT2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void btnTPD2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void btnTPD1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void btnTPV2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+       
 
         
 

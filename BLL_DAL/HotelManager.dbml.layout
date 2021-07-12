@@ -20,7 +20,7 @@
         <elementListCompartment Id="7c98e7d0-3245-455b-a9c0-bcc7d99e282f" absoluteBounds="3.7649999999999997, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 1.78929768880208); (3.75 : 1.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.78929768880208); (3.75 : 1.78929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/HotelManagerDataContext/LOAIPHONG/LOAIPHONG_PHONG" />
       <nodes>
         <classShapeMoniker Id="bd11b611-647b-4deb-8175-2c709bb35973" />
