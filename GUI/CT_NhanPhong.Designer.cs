@@ -34,10 +34,8 @@
             this.txtxMaPhieuNhap = new System.Windows.Forms.TextBox();
             this.txtHoTenKhach = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.CBBGT = new System.Windows.Forms.ComboBox();
             this.CBLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,13 +47,13 @@
             this.CBBDichVu = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSLDv = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGVDichVu = new System.Windows.Forms.DataGridView();
             this.BtnThem = new System.Windows.Forms.Button();
             this.BTNXoa = new System.Windows.Forms.Button();
             this.BTNSua = new System.Windows.Forms.Button();
             this.BTNTroVe = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDichVu)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -112,16 +110,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "CMND/Căn cước";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 321);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Giới tính";
-            // 
             // txtCMND
             // 
             this.txtCMND.Location = new System.Drawing.Point(231, 257);
@@ -138,14 +126,6 @@
             this.label6.Size = new System.Drawing.Size(115, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "Loại phòng";
-            // 
-            // CBBGT
-            // 
-            this.CBBGT.FormattingEnabled = true;
-            this.CBBGT.Location = new System.Drawing.Point(231, 319);
-            this.CBBGT.Name = "CBBGT";
-            this.CBBGT.Size = new System.Drawing.Size(168, 24);
-            this.CBBGT.TabIndex = 4;
             // 
             // CBLoaiPhong
             // 
@@ -241,14 +221,14 @@
             this.txtSLDv.Size = new System.Drawing.Size(168, 22);
             this.txtSLDv.TabIndex = 10;
             // 
-            // dataGridView1
+            // DGVDichVu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 461);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1201, 256);
-            this.dataGridView1.TabIndex = 11;
+            this.DGVDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVDichVu.Location = new System.Drawing.Point(12, 461);
+            this.DGVDichVu.Name = "DGVDichVu";
+            this.DGVDichVu.RowTemplate.Height = 24;
+            this.DGVDichVu.Size = new System.Drawing.Size(1201, 256);
+            this.DGVDichVu.TabIndex = 11;
             // 
             // BtnThem
             // 
@@ -321,12 +301,11 @@
             this.Controls.Add(this.BTNSua);
             this.Controls.Add(this.BTNXoa);
             this.Controls.Add(this.BtnThem);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGVDichVu);
             this.Controls.Add(this.DTPout);
             this.Controls.Add(this.DTPIn);
             this.Controls.Add(this.CBBDichVu);
             this.Controls.Add(this.CBLoaiPhong);
-            this.Controls.Add(this.CBBGT);
             this.Controls.Add(this.txtSLDv);
             this.Controls.Add(this.txtGiaPhong);
             this.Controls.Add(this.txtCMND);
@@ -335,7 +314,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtxMaPhieuNhap);
             this.Controls.Add(this.label9);
@@ -346,7 +324,7 @@
             this.Name = "CT_NhanPhong";
             this.Text = "Chi tiết nhận phòng";
             this.Load += new System.EventHandler(this.CT_NhanPhong_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDichVu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,10 +338,8 @@
         private System.Windows.Forms.TextBox txtxMaPhieuNhap;
         private System.Windows.Forms.TextBox txtHoTenKhach;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox CBBGT;
         private System.Windows.Forms.ComboBox CBLoaiPhong;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -375,7 +351,7 @@
         private System.Windows.Forms.ComboBox CBBDichVu;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtSLDv;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGVDichVu;
         private System.Windows.Forms.Button BtnThem;
         private System.Windows.Forms.Button BTNXoa;
         private System.Windows.Forms.Button BTNSua;

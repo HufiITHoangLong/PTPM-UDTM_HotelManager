@@ -1,5 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Hotel_Manager" Class="HotelManagerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Hotel_Manager;Persist Security Info=True;User ID=sa" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="Hotel_ManagerConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PHONG" Member="PHONGs">
+    <Type Name="PHONG">
+      <Column Name="MAPHONG" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TRANGTHAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SUCCHUA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MALOAIPHONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LOAIPHONG_PHONG" Member="LOAIPHONG" ThisKey="MALOAIPHONG" OtherKey="MALOAIPHONG" Type="LOAIPHONG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CT_NHANPHONG" Member="CT_NHANPHONGs">
+    <Type Name="CT_NHANPHONG">
+      <Column Name="MAPHIEUNHAP" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LOAIPHONG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="Char(14)" CanBeNull="true" />
+      <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="NGAYNHAN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NGAYTRA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GIAPHONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MADV" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="TENDV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SOLUONGDV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DICHVU_CT_NHANPHONG" Member="DICHVU" ThisKey="MADV" OtherKey="MADV" Type="DICHVU" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DICHVU" Member="DICHVUs">
+    <Type Name="DICHVU">
+      <Column Name="MADV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENDV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DONGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DICHVU_CT_NHANPHONG" Member="CT_NHANPHONGs" ThisKey="MADV" OtherKey="MADV" Type="CT_NHANPHONG" />
+    </Type>
+  </Table>
   <Table Name="dbo.LOAIPHONG" Member="LOAIPHONGs">
     <Type Name="LOAIPHONG">
       <Column Name="MALOAIPHONG" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -20,13 +53,14 @@
       <Column Name="QUYEN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.PHONG" Member="PHONGs">
-    <Type Name="PHONG">
-      <Column Name="MAPHONG" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TRANGTHAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SUCCHUA" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MALOAIPHONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="LOAIPHONG_PHONG" Member="LOAIPHONG" ThisKey="MALOAIPHONG" OtherKey="MALOAIPHONG" Type="LOAIPHONG" IsForeignKey="true" />
+  <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
+    <Type Name="KHACHHANG">
+      <Column Name="MAKH" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="Char(14)" CanBeNull="true" />
+      <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="DTHOAI" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="DCHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

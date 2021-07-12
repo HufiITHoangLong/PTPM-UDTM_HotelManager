@@ -143,6 +143,7 @@
             this.DGVNhanVien.RowTemplate.Height = 24;
             this.DGVNhanVien.Size = new System.Drawing.Size(713, 328);
             this.DGVNhanVien.TabIndex = 11;
+            this.DGVNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVNhanVien_CellClick);
             // 
             // BTNThem
             // 
@@ -154,6 +155,7 @@
             this.BTNThem.TabIndex = 7;
             this.BTNThem.Text = "Thêm";
             this.BTNThem.UseVisualStyleBackColor = true;
+            this.BTNThem.Click += new System.EventHandler(this.BTNThem_Click);
             // 
             // BTNXoa
             // 
@@ -165,6 +167,7 @@
             this.BTNXoa.TabIndex = 8;
             this.BTNXoa.Text = "Xóa";
             this.BTNXoa.UseVisualStyleBackColor = true;
+            this.BTNXoa.Click += new System.EventHandler(this.BTNXoa_Click);
             // 
             // BTNSua
             // 
@@ -176,6 +179,7 @@
             this.BTNSua.TabIndex = 9;
             this.BTNSua.Text = "Sửa";
             this.BTNSua.UseVisualStyleBackColor = true;
+            this.BTNSua.Click += new System.EventHandler(this.BTNSua_Click);
             // 
             // CBBQuyen
             // 
@@ -206,6 +210,7 @@
             this.BTNTroVe.TabIndex = 10;
             this.BTNTroVe.Text = "Trở về";
             this.BTNTroVe.UseVisualStyleBackColor = true;
+            this.BTNTroVe.Click += new System.EventHandler(this.BTNTroVe_Click);
             // 
             // textBoxPhone1
             // 

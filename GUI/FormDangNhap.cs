@@ -42,6 +42,7 @@ namespace GUI
             
             if (dn != null && dn.QUYEN != "Admin")
             {
+                this.Hide();
                 MessageBox.Show("Xin chào " + dn.QUYEN, "Thông báo", MessageBoxButtons.OK);
                 FormMainS fms = new FormMainS();
                 fms.ShowDialog();
@@ -50,6 +51,7 @@ namespace GUI
             }
             else if (dn.QUYEN == "Admin")
             {
+                this.Hide();
                 MessageBox.Show("Xin chào " + dn.QUYEN, "Thông báo", MessageBoxButtons.OK);
                 FormMain fm = new FormMain();
                 fm.ShowDialog();

@@ -82,3 +82,31 @@ Create table DICHVU
 	DONGIA int,
 	PRIMARY KEY (MADV)
 )
+
+INSERT INTO DICHVU
+VALUES ('DV01', N'Giặt ủi quần áo', 50000),
+('DV02', N'Thuê phương tiện di chuyển', 150000),
+('DV03', N'Ăn sáng', 75000),
+('DV04', 'Pepsi', 20000),
+('DV05', N'Nước ép các loại', 40000)
+
+select * from DICHVU
+
+Create table KHACHHANG
+(
+	MAKH char(10) not null,
+	TENKH nvarchar(50),
+	CMND char(14),
+	GIOITINH nvarchar(6),
+	DTHOAI char(10),
+	DCHI nvarchar(50),
+	PRIMARY KEY (MAKH)
+)
+
+Select * from NHANVIEN
+
+INSERT INTO KHACHHANG
+VALUES ('KH01', N'Nguyễn Văn Phú', '2509281932','Nam', '0985326741', N'Quận 4, Thành phố Hồ Chí Minh'),
+('KH02', N'Lê Thị Mỹ Vân', '3002486612',N'Nữ', '0153692874', N'Quận Tân Bình, Thành phố Hồ Chí Minh'),
+('KH03', N'Trần Đức Ninh', '369281751','Nam', '0659182741', N'Đức Hòa, Long An'),
+('KH04', N'Ngô Thành Nam', '326281699','Nam' ,'0362951847', N'Quận 2, Thành phố Hồ Chí Minh')

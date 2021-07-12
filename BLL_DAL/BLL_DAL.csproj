@@ -41,11 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DichVu.cs" />
     <Compile Include="HotelManager.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelManager.dbml</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="Phong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,6 +56,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ThongKe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -35,7 +35,23 @@ namespace GUI
 
         private void quảnLýPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FormPhong fp = new FormPhong();
+            fp.ShowDialog();
+        }
 
+        private void liênHệToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLienHe flh = new FormLienHe();
+            flh.ShowDialog();
+        }
+
+        private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormKhachHang fkh = new FormKhachHang();
+            fkh.ShowDialog();
         }
     }
 }

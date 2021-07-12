@@ -96,6 +96,7 @@ namespace GUI
 
         private void btnTPT1_Click(object sender, EventArgs e)
         {
+            btnTPT1.BackColor = Color.Lime;
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
@@ -103,6 +104,7 @@ namespace GUI
 
         private void btnTPV1_Click(object sender, EventArgs e)
         {
+            btnTPT1.BackColor = Color.Lime;
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
@@ -110,6 +112,7 @@ namespace GUI
 
         private void btnTPT2_Click(object sender, EventArgs e)
         {
+            btnTPT1.BackColor = Color.Lime;
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
@@ -117,6 +120,7 @@ namespace GUI
 
         private void btnTPD2_Click(object sender, EventArgs e)
         {
+            btnTPT1.BackColor = Color.Lime;
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
@@ -124,6 +128,7 @@ namespace GUI
 
         private void btnTPD1_Click(object sender, EventArgs e)
         {
+            btnTPT1.BackColor = Color.Lime;
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
@@ -131,9 +136,47 @@ namespace GUI
 
         private void btnTPV2_Click(object sender, EventArgs e)
         {
+            btnTPT1.BackColor = Color.Lime;
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
+        }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHoaDon fhd = new FormHoaDon();
+            fhd.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOutpd1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOutpv1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
 
        

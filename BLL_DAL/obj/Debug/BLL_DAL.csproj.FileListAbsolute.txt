@@ -3,3 +3,8 @@ D:\hoc\HotelManager\BLL_DAL\bin\Debug\BLL_DAL.dll
 D:\hoc\HotelManager\BLL_DAL\bin\Debug\BLL_DAL.pdb
 D:\hoc\HotelManager\BLL_DAL\obj\Debug\BLL_DAL.dll
 D:\hoc\HotelManager\BLL_DAL\obj\Debug\BLL_DAL.pdb
+D:\PTPM-UDTM_HotelManager\BLL_DAL\bin\Debug\BLL_DAL.dll.config
+D:\PTPM-UDTM_HotelManager\BLL_DAL\bin\Debug\BLL_DAL.dll
+D:\PTPM-UDTM_HotelManager\BLL_DAL\bin\Debug\BLL_DAL.pdb
+D:\PTPM-UDTM_HotelManager\BLL_DAL\obj\Debug\BLL_DAL.dll
+D:\PTPM-UDTM_HotelManager\BLL_DAL\obj\Debug\BLL_DAL.pdb
