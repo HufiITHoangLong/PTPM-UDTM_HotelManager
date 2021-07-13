@@ -29,6 +29,16 @@ namespace BLL_DAL
             return data;
         }
 
+        public IQueryable GetMP()
+        {
+            var mp = from mps in db.PHONGs.Where(x=>x.TRANGTHAI == 0)
+                     select new
+                     {
+                         mps.MAPHONG
+                        
+                     };
+            return mp;
+        }
         public IQueryable getMaLP()
         {
             var lp = from lps in db.LOAIPHONGs

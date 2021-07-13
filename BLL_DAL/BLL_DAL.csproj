@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTHD.cs" />
     <Compile Include="DichVu.cs" />
-    <Compile Include="DichVuNhanPhong.cs" />
+    <Compile Include="HoaDonPH.cs" />
     <Compile Include="HotelManager.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

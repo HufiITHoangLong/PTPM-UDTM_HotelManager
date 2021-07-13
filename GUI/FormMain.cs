@@ -14,6 +14,7 @@ namespace GUI
     {
         NhanVien nv = new NhanVien();
         Phong p = new Phong();
+        HoaDonPH hd = new HoaDonPH();
         HotelManagerDataContext db = new HotelManagerDataContext();
         public FormMain()
         {
@@ -117,21 +118,6 @@ namespace GUI
             ctnp.ShowDialog();
         }
 
-        private void btnTPT2_Click(object sender, EventArgs e)
-        {
-            GiaPhong = 400000;
-            this.Hide();
-            CT_NhanPhong ctnp = new CT_NhanPhong();
-            ctnp.ShowDialog();
-        }
-
-        private void btnTPD2_Click(object sender, EventArgs e)
-        {
-            GiaPhong = 600000;
-            this.Hide();
-            CT_NhanPhong ctnp = new CT_NhanPhong();
-            ctnp.ShowDialog();
-        }
 
         private void btnTPD1_Click(object sender, EventArgs e)
         {
@@ -140,69 +126,26 @@ namespace GUI
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
         }
-
-        private void btnTPV2_Click(object sender, EventArgs e)
-        {
-            GiaPhong = 900000;
-            this.Hide();
-            CT_NhanPhong ctnp = new CT_NhanPhong();
-            ctnp.ShowDialog();
-        }
-
-        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormHoaDon fhd = new FormHoaDon();
-            fhd.ShowDialog();
-        }
-
+       
         private void button2_Click(object sender, EventArgs e)
         {
-
-            labelNgayDenpt1.Text = "...";
-            LabelNgayDipt1.Text = "...";
-            
-            
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            labelNgayDenpv2.Text = "...";
-            LabelNgayDipv2.Text = "...";
-            
-            
+            this.Hide();
+            FormChiTietHD fcthd = new FormChiTietHD();
+            fcthd.ShowDialog();
         }
 
         private void btnOutpd1_Click(object sender, EventArgs e)
         {
-            labelNgayDenpd1.Text = "...";
-            LabelNgayDipd1.Text = "...";
-            
-            
+            this.Hide();
+            FormChiTietHD fcthd = new FormChiTietHD();
+            fcthd.ShowDialog();
         }
 
         private void btnOutpv1_Click(object sender, EventArgs e)
         {
-            labelNgayDenpv1.Text = "...";
-            LabelNgayDipv1.Text = "...";
-            
-           
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            labelNgayDenpt2.Text = "...";
-            LabelNgayDipt2.Text = "...";
-            
-            
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            labelNgayDenpd2.Text = "...";
-            LabelNgayDipd2.Text = "...";
-            
-            
+            this.Hide();
+            FormChiTietHD fcthd = new FormChiTietHD();
+            fcthd.ShowDialog();
         }
 
         }

@@ -38,7 +38,7 @@ Values (2, N'Phòng đôi', '600000', null, null),
 (3, N'Phòng VIP', '900000', null, null)
 (1, N'Phòng đơn', '400000', null, null),
 
-select * from LOAIPHONG
+select * from PHONG
 
 INSERT INTO PHONG
 VALUES ('P1', 0, 2, 1),
@@ -59,23 +59,26 @@ from LOAIPHONG
 WHERE MALOAIPHONG = 2
 
 
-Create table CT_NHANPHONG
+Create table HOADONPH
 (
-	MAPN char(10) not null,
+	MAHD char(10) not null,
 	MAKH char(10),
-	MADV char(10),	
-	SOLUONG int,
-	DONGIA int,
+	MADV char(10),
+	SOLUONGDV int,
+	DONGIADV int,
+	MAPH char (10),
+	DONGIAP int,	
 	NGAYVAO datetime,
-	NGAYDI datetime,
-	PRIMARY KEY(MAPN),
+	NGAYRA datetime,
+	PRIMARY KEY(MAHD),
 	CONSTRAINT FK_DVNP FOREIGN KEY (MADV) REFERENCES DICHVU (MADV),
-	CONSTRAINT FK_KH FOREIGN KEY (MAKH) REFERENCES KHACHHANG (MAKH)
+	CONSTRAINT FK_KH FOREIGN KEY (MAKH) REFERENCES KHACHHANG (MAKH),
+	CONSTRAINT FK_P FOREIGN KEY (MAPH) REFERENCES PHONG (MAPHONG),
 )
 
-select * from CT_NHANPHONG
+select * from HOADONPH
 
-DROP TABLE CT_NHANPHONG
+DROP TABLE HOADONPH
 
 Create table DICHVU
 (
@@ -118,19 +121,23 @@ VALUES ('KH01', N'Nguyễn Văn Phú', '2509281932','Nam', '0985326741', N'Quậ
 INSERT INTO KHACHHANG
 VALUES ('KH05', N'Khách vãng lai', null, null, null,null)
 
-INSERT INTO CT_NHANPHONG
-VALUES ('pn1', 'KH05', 'DV01', 3, 400000, '06/06/2021', '06/08/2021')
+select * from HOADONPH
 
-SELECT * FROM CT_NHANPHONG
 
-Create table HoaDon
+Create table CHITIETHD
 (
-	MAHD char(10) not null,
-	MAPN char(10),
+	MAHD char(10),
+	MAPH char(10),
 	TENKH nvarchar(50),
-	TONGTIEN int,
+	TONGTIENDV int,
+	TONGTIENPHONG int,
+	THANHTIEN int
+	PRIMARY KEY (MAHD),
+	CONSTRAINT FK_MP FOREIGN KEY (MAPH) REFERENCES PHONG (MAPHONG),
+	CONSTRAINT FK_MHD FOREIGN KEY (MAHD) REFERENCES HOADONPH (MAHD)
 )
 
-DROP TABLE HOADON
 
-Select * from HoaDon
+select * from CHITIETHD
+
+

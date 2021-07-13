@@ -15,11 +15,10 @@ namespace GUI
     public partial class CT_NhanPhong : Form
     {
         HotelManagerDataContext db = new HotelManagerDataContext();
-        DichVuNhanPhong np = new DichVuNhanPhong();
         DichVu dv = new DichVu();
         Phong p = new Phong();
         KhachHang kh = new KhachHang();
-        CT_NHANPHONG ctnp = new CT_NHANPHONG();
+        HoaDonPH hd = new HoaDonPH();
         public CT_NhanPhong()
         {
             InitializeComponent();
@@ -36,24 +35,34 @@ namespace GUI
             CBKH.ValueMember = "MAKH";
             CBKH.DataSource = kh.GetDataKHs();
 
-            DGVNhanPhong.DataSource = np.getData();       
+            CBBMAPhong.DisplayMember = "MAPHONG";
+            CBBMAPhong.ValueMember = "MAPHONG";
+            CBBMAPhong.DataSource = p.GetMP();
+
+            DGVNhanPhong.DataSource = hd.getData();       
         }       
         private void BtnThem_Click(object sender, EventArgs e)
         {
-            
-            if (String.IsNullOrEmpty(txtMaPhieuNhap.Text))
+            if (String.IsNullOrEmpty(txtMaHD.Text))
             {
-                MessageBox.Show("Vui lòng nhập mã phiếu nhận phòng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMaPhieuNhap.Select();
+                MessageBox.Show("Vui lòng nhập mã hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaHD.Select();
                 return;
             }
-            if (DTPIn.Value > DTPout.Value)
+
+            if (String.IsNullOrEmpty(txtSLDv.Text))
             {
-                MessageBox.Show("Ngày Checkin phải nhỏ hơn ngày Checkout", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DTPIn.Select();
+                MessageBox.Show("Vui lòng nhập số lượng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtSLDv.Select();
                 return;
-            }  
+            }
             
+            if (String.IsNullOrEmpty(txtDGDV.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đơn giá dịch vụ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDGDV.Select();
+                return;
+            }
             if (String.IsNullOrEmpty(txtSLDv.Text))
             {
                 MessageBox.Show("Vui lòng nhập số lượng dịch vụ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -61,11 +70,15 @@ namespace GUI
                 return;
                 
             }
-            np.Add(txtMaPhieuNhap.Text, CBKH.SelectedValue.ToString(), CBMADV.SelectedValue.ToString(), int.Parse(txtSLDv.Text), FormMain.GiaPhong, DTPIn.Value, DTPout.Value);
+            hd.Add(txtMaHD.Text,CBKH.SelectedValue.ToString(),CBMADV.SelectedValue.ToString(), int.Parse(txtSLDv.Text),int.Parse(txtDGDV.Text), CBBMAPhong.SelectedValue.ToString(), FormMain.GiaPhong, DateTime.Now, DTPIn.Value);
+            DGVNhanPhong.DataSource = hd.getData();
+            string idp = CBBMAPhong.SelectedValue.ToString();
+            var ttp = db.PHONGs.SingleOrDefault(x => x.MAPHONG == idp);
+            ttp.TRANGTHAI = 1;
             db.SubmitChanges();
-            DGVNhanPhong.DataSource = np.getData();
+            CBBMAPhong.DataSource = p.GetMP();
             MessageBox.Show("Thêm thành công");
-            txtMaPhieuNhap.Text = txtSLDv.Text = null;
+            txtMaHD.Text = txtSLDv.Text = null;
         }
         private DataGridViewRow r;
         private void BTNXoa_Click(object sender, EventArgs e)
@@ -76,12 +89,17 @@ namespace GUI
                 return;
             }
 
-            np.Delete(txtMaPhieuNhap.Text);
-            DGVNhanPhong.DataSource = np.getData();
+            hd.Delete(txtMaHD.Text);
+            DGVNhanPhong.DataSource = hd.getData();
+            string idp = CBBMAPhong.SelectedValue.ToString();
+            var ttp = db.PHONGs.SingleOrDefault(x => x.MAPHONG == idp);
+            ttp.TRANGTHAI = 0;
+            db.SubmitChanges();
+            CBBMAPhong.DataSource = p.GetMP();
             MessageBox.Show("Xóa thành công");
-            txtMaPhieuNhap.Clear();
+            txtMaHD.Clear();
+            txtSLDv.Clear();
             
-            //txtSLDv.Clear();
         }
         
         private void BTNSua_Click(object sender, EventArgs e)
@@ -92,14 +110,21 @@ namespace GUI
                 return;
             }
 
-            var dv = db.CT_NHANPHONGs.SingleOrDefault(x => x.MAPN == r.Cells["MAPN"].Value.ToString());
-            dv.MADV = CBMADV.SelectedValue.ToString();
-            dv.MAKH = CBKH.SelectedValue.ToString();
-            dv.SOLUONG = int.Parse(txtSLDv.Text);
+            var update = db.HOADONPHs.SingleOrDefault(x => x.MAHD == r.Cells["MAHD"].Value.ToString());
+            update.MAHD = txtMaHD.Text;
+            update.MAKH = CBKH.SelectedValue.ToString();
+            update.MADV = CBMADV.SelectedValue.ToString();
+            update.SOLUONGDV = int.Parse(txtSLDv.Text);
+            update.DONGIADV = int.Parse(txtDGDV.Text);
+            update.NGAYRA = DTPIn.Value;
+            string idp = CBBMAPhong.SelectedValue.ToString();
+            var ttp = db.PHONGs.SingleOrDefault(x => x.MAPHONG == idp);
+            ttp.TRANGTHAI = 1;
             db.SubmitChanges();
-            DGVNhanPhong.DataSource = np.getData();
+            CBBMAPhong.DataSource = p.GetMP();
+            DGVNhanPhong.DataSource = hd.getData();
             MessageBox.Show("Cập nhật thông tin phiếu nhập thành công");
-            txtMaPhieuNhap.Text =  txtSLDv.Text = null;
+            txtMaHD.Text = txtSLDv.Text = txtDGDV.Text = null;
         }
 
         private void BTNTroVe_Click(object sender, EventArgs e)
@@ -109,31 +134,15 @@ namespace GUI
             fm.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Button Save
-            
-        }
-
         private void DGVNhanPhong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 r = DGVNhanPhong.Rows[e.RowIndex];
-                txtMaPhieuNhap.Text = r.Cells["MAPN"].Value.ToString();
-                txtSLDv.Text = r.Cells["SOLUONG"].Value.ToString();
+                txtMaHD.Text = r.Cells["MAHD"].Value.ToString();
+                txtSLDv.Text = r.Cells["SOLUONGDV"].Value.ToString();
             }
               
         }
-
-        private void BtnTaoHD_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormHoaDon fhd = new FormHoaDon();
-            fhd.ShowDialog();
-        }
-
-        
-
     }
 }

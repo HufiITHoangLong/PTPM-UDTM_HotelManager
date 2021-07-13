@@ -75,6 +75,12 @@
     </Compile>
     <Compile Include="ExcelExport.cs" />
     <Compile Include="FileCommon.cs" />
+    <Compile Include="FormChiTietHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChiTietHD.Designer.cs">
+      <DependentUpon>FormChiTietHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,12 +92,6 @@
     </Compile>
     <Compile Include="FormDichVu.Designer.cs">
       <DependentUpon>FormDichVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHoaDon.Designer.cs">
-      <DependentUpon>FormHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="FormKhachHang.cs">
       <SubType>Form</SubType>
@@ -147,11 +147,11 @@
     <EmbeddedResource Include="CT_NhanPhong.resx">
       <DependentUpon>CT_NhanPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChiTietHD.resx">
+      <DependentUpon>FormChiTietHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHoaDon.resx">
-      <DependentUpon>FormHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
