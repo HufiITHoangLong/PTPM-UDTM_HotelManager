@@ -55,8 +55,18 @@
       <Column Name="MADV" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DONGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NGAYVAO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NGAYDI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="DICHVU_CT_NHANPHONG" Member="DICHVU" ThisKey="MADV" OtherKey="MADV" Type="DICHVU" IsForeignKey="true" />
       <Association Name="KHACHHANG_CT_NHANPHONG" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HoaDon" Member="HoaDons">
+    <Type Name="HoaDon">
+      <Column Name="MAHD" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MAPN" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="TENKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TONGTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

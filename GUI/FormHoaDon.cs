@@ -8,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GUI
 {
     public partial class FormHoaDon : Form
     {
+        
         public FormHoaDon()
         {
             InitializeComponent();
+        }
+
+        private void FormHoaDon_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

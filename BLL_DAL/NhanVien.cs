@@ -49,8 +49,8 @@ namespace BLL_DAL
                     USERNAME = auser,
                     PASSWORD = apass,
                     HOTENNV = aHotennv,
-                    DIACHI = aDc,
                     DIENTHOAI = adt,
+                    DIACHI = aDc,
                     QUYEN = aquyen
 
                 };

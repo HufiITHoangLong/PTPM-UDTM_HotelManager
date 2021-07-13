@@ -127,6 +127,14 @@ namespace BLL_DAL
 				return this.GetTable<CT_NHANPHONG>();
 			}
 		}
+		
+		public System.Data.Linq.Table<HoaDon> HoaDons
+		{
+			get
+			{
+				return this.GetTable<HoaDon>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PHONG")]
@@ -1036,6 +1044,10 @@ namespace BLL_DAL
 		
 		private System.Nullable<int> _DONGIA;
 		
+		private System.Nullable<System.DateTime> _NGAYVAO;
+		
+		private System.Nullable<System.DateTime> _NGAYDI;
+		
 		private EntityRef<DICHVU> _DICHVU;
 		
 		private EntityRef<KHACHHANG> _KHACHHANG;
@@ -1054,6 +1066,10 @@ namespace BLL_DAL
     partial void OnSOLUONGChanged();
     partial void OnDONGIAChanging(System.Nullable<int> value);
     partial void OnDONGIAChanged();
+    partial void OnNGAYVAOChanging(System.Nullable<System.DateTime> value);
+    partial void OnNGAYVAOChanged();
+    partial void OnNGAYDIChanging(System.Nullable<System.DateTime> value);
+    partial void OnNGAYDIChanged();
     #endregion
 		
 		public CT_NHANPHONG()
@@ -1171,6 +1187,46 @@ namespace BLL_DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYVAO", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NGAYVAO
+		{
+			get
+			{
+				return this._NGAYVAO;
+			}
+			set
+			{
+				if ((this._NGAYVAO != value))
+				{
+					this.OnNGAYVAOChanging(value);
+					this.SendPropertyChanging();
+					this._NGAYVAO = value;
+					this.SendPropertyChanged("NGAYVAO");
+					this.OnNGAYVAOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYDI", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NGAYDI
+		{
+			get
+			{
+				return this._NGAYDI;
+			}
+			set
+			{
+				if ((this._NGAYDI != value))
+				{
+					this.OnNGAYDIChanging(value);
+					this.SendPropertyChanging();
+					this._NGAYDI = value;
+					this.SendPropertyChanged("NGAYDI");
+					this.OnNGAYDIChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DICHVU_CT_NHANPHONG", Storage="_DICHVU", ThisKey="MADV", OtherKey="MADV", IsForeignKey=true)]
 		public DICHVU DICHVU
 		{
@@ -1256,6 +1312,87 @@ namespace BLL_DAL
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.HoaDon")]
+	public partial class HoaDon
+	{
+		
+		private string _MAHD;
+		
+		private string _MAPN;
+		
+		private string _TENKH;
+		
+		private System.Nullable<int> _TONGTIEN;
+		
+		public HoaDon()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAHD", DbType="Char(10) NOT NULL", CanBeNull=false)]
+		public string MAHD
+		{
+			get
+			{
+				return this._MAHD;
+			}
+			set
+			{
+				if ((this._MAHD != value))
+				{
+					this._MAHD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAPN", DbType="Char(10)")]
+		public string MAPN
+		{
+			get
+			{
+				return this._MAPN;
+			}
+			set
+			{
+				if ((this._MAPN != value))
+				{
+					this._MAPN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENKH", DbType="NVarChar(50)")]
+		public string TENKH
+		{
+			get
+			{
+				return this._TENKH;
+			}
+			set
+			{
+				if ((this._TENKH != value))
+				{
+					this._TENKH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TONGTIEN", DbType="Int")]
+		public System.Nullable<int> TONGTIEN
+		{
+			get
+			{
+				return this._TONGTIEN;
+			}
+			set
+			{
+				if ((this._TONGTIEN != value))
+				{
+					this._TONGTIEN = value;
+				}
 			}
 		}
 	}

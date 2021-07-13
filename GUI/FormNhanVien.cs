@@ -22,8 +22,7 @@ namespace GUI
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
             DGVNhanVien.DataSource = nv.GetData();
-            CBBQuyen.DisplayMember = "QUYEN";
-            CBBQuyen.DataSource = nv.GetQuyenNV();
+            
         }
 
         private void BTNTroVe_Click(object sender, EventArgs e)
@@ -33,6 +32,7 @@ namespace GUI
             fm.ShowDialog();
         }
         private DataGridViewRow r;
+        
         private void BTNSua_Click(object sender, EventArgs e)
         {
             if (r == null)
@@ -40,12 +40,17 @@ namespace GUI
                 MessageBox.Show("Vui lòng chọn nhân viên muốn cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            DGVNhanVien.DataSource = nv.Update(TBUser.Text, tbPass.Text, tbHoTen.Text, textBoxPhone1.Text, TBDiaChi.Text, CBBQuyen.SelectedValue.ToString());
+            var updatenv = db.NHANVIENs.FirstOrDefault(x => x.USERNAME == r.Cells["USERNAME"].Value.ToString());
+            updatenv.USERNAME = TBUser.Text;
+            updatenv.PASSWORD = tbPass.Text;
+            updatenv.HOTENNV = tbHoTen.Text;
+            updatenv.DIENTHOAI = textBoxPhone1.Text;
+            updatenv.DIACHI = TBDiaChi.Text;
+            db.SubmitChanges();
             MessageBox.Show("Cập nhật thông tin nhân viên thành công");
             DGVNhanVien.DataSource = nv.GetData();
             TBUser.Text = tbPass.Text = tbHoTen.Text = textBoxPhone1.Text = TBDiaChi.Text = null;
-            CBBQuyen.SelectedIndex = -1;
+           
         }
 
         private void BTNXoa_Click(object sender, EventArgs e)
@@ -64,10 +69,11 @@ namespace GUI
             tbHoTen.Clear();
             textBoxPhone1.Clear();
             TBDiaChi.Clear();
-            CBBQuyen.SelectedIndex = -1;
+           
         }
-        
 
+        HotelManagerDataContext db = new HotelManagerDataContext();
+        
         private void BTNThem_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(TBUser.Text))
@@ -103,11 +109,19 @@ namespace GUI
                 return;
             }
 
-            DGVNhanVien.DataSource = nv.Add(TBUser.Text, tbPass.Text, tbHoTen.Text, textBoxPhone1.Text, TBDiaChi.Text, CBBQuyen.SelectedValue.ToString());
+            var nvs = new NHANVIEN();
+            nvs.USERNAME = TBUser.Text;
+            nvs.HOTENNV = tbHoTen.Text;
+            nvs.PASSWORD = tbPass.Text;
+            nvs.DIENTHOAI = textBoxPhone1.Text;
+            nvs.DIACHI = TBDiaChi.Text;
+            //nvs.QUYEN = CBBQuyen.SelectedValue.ToString();
+            db.NHANVIENs.InsertOnSubmit(nvs);
+            db.SubmitChanges();
             MessageBox.Show("Thêm nhân viên thành công");
             DGVNhanVien.DataSource = nv.GetData();
             TBUser.Text = tbPass.Text = tbHoTen.Text = textBoxPhone1.Text = TBDiaChi.Text = null;
-            CBBQuyen.SelectedIndex = -1;
+            
         }
 
         private void DGVNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)

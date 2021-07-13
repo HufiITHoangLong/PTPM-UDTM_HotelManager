@@ -78,19 +78,19 @@ namespace BLL_DAL
             }
         }
 
-        public bool Update(string aMakh,string aHoten, string aCMND, string aDienThoai, string aDiaChi, string aGT)
-        {
-            try
-            {
-                KHACHHANG XoaKH = db.KHACHHANGs.Where(t => t.MAKH == aMakh).First();
-                db.SubmitChanges();
-                return true;
+        //public bool Update(string aMakh, string aHoten, string aCMND, string aDienThoai, string aDiaChi, string aGT)
+        //{
+        //    try
+        //    {
+        //        KHACHHANG XoaKH = db.KHACHHANGs.Where(t => t.MAKH == aMakh).First();
+        //        db.SubmitChanges();
+        //        return true;
 
-            }
-            catch
-            {
-                return false;
-            }
-        }
+        //    }
+        //    catch
+        //    {
+        //        return false;
+        //    }
+        //}
     }
 }

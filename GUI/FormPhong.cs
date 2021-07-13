@@ -70,12 +70,13 @@ namespace GUI
                 MessageBox.Show("Vui lòng chọn loại phòng muốn cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (nv.QUYEN == "Staff")
-            {
-                MessageBox.Show("Bạn không có quyền thực hiện thao tác này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            DGVPhong.DataSource = phong.Update(TBMAPHONG.Text, Int32.Parse(TBTrangThai.Text), int.Parse(TBSC.Text));
+
+            var pg = db.PHONGs.SingleOrDefault(x => x.MAPHONG == r.Cells["MAPHONG"].Value.ToString());
+            pg.MAPHONG = TBMAPHONG.Text;
+            pg.TRANGTHAI = int.Parse(TBTrangThai.Text);
+            pg.SUCCHUA = int.Parse(TBSC.Text);
+            pg.MALOAIPHONG = int.Parse(TBLoai.Text);
+            db.SubmitChanges();
             MessageBox.Show("Cập nhật phòng thành công");
             DGVPhong.DataSource = phong.getDataP();
             TBMAPHONG.Text = TBTrangThai.Text = TBSC.Text = null;

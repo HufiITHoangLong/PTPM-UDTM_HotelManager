@@ -66,6 +66,8 @@ Create table CT_NHANPHONG
 	MADV char(10),	
 	SOLUONG int,
 	DONGIA int,
+	NGAYVAO datetime,
+	NGAYDI datetime,
 	PRIMARY KEY(MAPN),
 	CONSTRAINT FK_DVNP FOREIGN KEY (MADV) REFERENCES DICHVU (MADV),
 	CONSTRAINT FK_KH FOREIGN KEY (MAKH) REFERENCES KHACHHANG (MAKH)
@@ -117,4 +119,18 @@ INSERT INTO KHACHHANG
 VALUES ('KH05', N'Khách vãng lai', null, null, null,null)
 
 INSERT INTO CT_NHANPHONG
-VALUES ('pn1', 'KH05', 'DV01', 3, 400000)
+VALUES ('pn1', 'KH05', 'DV01', 3, 400000, '06/06/2021', '06/08/2021')
+
+SELECT * FROM CT_NHANPHONG
+
+Create table HoaDon
+(
+	MAHD char(10) not null,
+	MAPN char(10),
+	TENKH nvarchar(50),
+	TONGTIEN int,
+)
+
+DROP TABLE HOADON
+
+Select * from HoaDon

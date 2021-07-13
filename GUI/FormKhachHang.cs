@@ -115,7 +115,8 @@ namespace GUI
             textBoxPhone1.Clear();
             txtGT.Clear();
         }
-
+        private DataGridViewRow r;
+        HotelManagerDataContext db = new HotelManagerDataContext();
         private void BtnSua_Click(object sender, EventArgs e)
         {
             if (r == null)
@@ -124,12 +125,18 @@ namespace GUI
                 return;
             }
 
-            DGVKhachHang.DataSource = kh.Update(txtMakhach.Text, txtHoTen.Text, txtCMND.Text, textBoxPhone1.Text, txtDiaChi.Text, txtGT.Text);
-            MessageBox.Show("Cập nhật thông tin khách hàng thành công");
+            var hk = db.KHACHHANGs.SingleOrDefault(x => x.MAKH == r.Cells["MAKH"].Value.ToString());
+            hk.TENKH = txtHoTen.Text;
+            hk.CMND = txtCMND.Text;
+            hk.GIOITINH = txtGT.Text;
+            hk.DTHOAI = textBoxPhone1.Text;
+            hk.DCHI = txtDiaChi.Text;
+            db.SubmitChanges();
             DGVKhachHang.DataSource = kh.GetDataKH();
-            txtMakhach.Text = txtHoTen.Text = txtCMND.Text = textBoxPhone1.Text = txtDiaChi.Text = txtGT.Text = null;
+            MessageBox.Show("Cập nhật thông tin phiếu nhập thành công");
+            txtCMND.Text =  txtCMND.Text =  txtCMND.Text = textBoxPhone1.Text = txtDiaChi.Text = null;
         }
-        private DataGridViewRow r;
+        
         private void DGVKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
              if (e.RowIndex >= 0)

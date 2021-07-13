@@ -45,9 +45,9 @@ namespace GUI
     partial void InsertKHACHHANG(KHACHHANG instance);
     partial void UpdateKHACHHANG(KHACHHANG instance);
     partial void DeleteKHACHHANG(KHACHHANG instance);
-    partial void InsertCT_DICHVUNHANPHONG(CT_DICHVUNHANPHONG instance);
-    partial void UpdateCT_DICHVUNHANPHONG(CT_DICHVUNHANPHONG instance);
-    partial void DeleteCT_DICHVUNHANPHONG(CT_DICHVUNHANPHONG instance);
+    partial void InsertCT_NHANPHONG(CT_NHANPHONG instance);
+    partial void UpdateCT_NHANPHONG(CT_NHANPHONG instance);
+    partial void DeleteCT_NHANPHONG(CT_NHANPHONG instance);
     #endregion
 		
 		public HotelManagerDataContext() : 
@@ -120,11 +120,11 @@ namespace GUI
 			}
 		}
 		
-		public System.Data.Linq.Table<CT_DICHVUNHANPHONG> CT_DICHVUNHANPHONGs
+		public System.Data.Linq.Table<CT_NHANPHONG> CT_NHANPHONGs
 		{
 			get
 			{
-				return this.GetTable<CT_DICHVUNHANPHONG>();
+				return this.GetTable<CT_NHANPHONG>();
 			}
 		}
 	}
@@ -316,7 +316,7 @@ namespace GUI
 		
 		private System.Nullable<int> _DONGIA;
 		
-		private EntitySet<CT_DICHVUNHANPHONG> _CT_DICHVUNHANPHONGs;
+		private EntitySet<CT_NHANPHONG> _CT_NHANPHONGs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -332,7 +332,7 @@ namespace GUI
 		
 		public DICHVU()
 		{
-			this._CT_DICHVUNHANPHONGs = new EntitySet<CT_DICHVUNHANPHONG>(new Action<CT_DICHVUNHANPHONG>(this.attach_CT_DICHVUNHANPHONGs), new Action<CT_DICHVUNHANPHONG>(this.detach_CT_DICHVUNHANPHONGs));
+			this._CT_NHANPHONGs = new EntitySet<CT_NHANPHONG>(new Action<CT_NHANPHONG>(this.attach_CT_NHANPHONGs), new Action<CT_NHANPHONG>(this.detach_CT_NHANPHONGs));
 			OnCreated();
 		}
 		
@@ -396,16 +396,16 @@ namespace GUI
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DICHVU_CT_DICHVUNHANPHONG", Storage="_CT_DICHVUNHANPHONGs", ThisKey="MADV", OtherKey="MADV")]
-		public EntitySet<CT_DICHVUNHANPHONG> CT_DICHVUNHANPHONGs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DICHVU_CT_NHANPHONG", Storage="_CT_NHANPHONGs", ThisKey="MADV", OtherKey="MADV")]
+		public EntitySet<CT_NHANPHONG> CT_NHANPHONGs
 		{
 			get
 			{
-				return this._CT_DICHVUNHANPHONGs;
+				return this._CT_NHANPHONGs;
 			}
 			set
 			{
-				this._CT_DICHVUNHANPHONGs.Assign(value);
+				this._CT_NHANPHONGs.Assign(value);
 			}
 		}
 		
@@ -429,13 +429,13 @@ namespace GUI
 			}
 		}
 		
-		private void attach_CT_DICHVUNHANPHONGs(CT_DICHVUNHANPHONG entity)
+		private void attach_CT_NHANPHONGs(CT_NHANPHONG entity)
 		{
 			this.SendPropertyChanging();
 			entity.DICHVU = this;
 		}
 		
-		private void detach_CT_DICHVUNHANPHONGs(CT_DICHVUNHANPHONG entity)
+		private void detach_CT_NHANPHONGs(CT_NHANPHONG entity)
 		{
 			this.SendPropertyChanging();
 			entity.DICHVU = null;
@@ -828,7 +828,7 @@ namespace GUI
 		
 		private string _DCHI;
 		
-		private EntitySet<CT_DICHVUNHANPHONG> _CT_DICHVUNHANPHONGs;
+		private EntitySet<CT_NHANPHONG> _CT_NHANPHONGs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -850,7 +850,7 @@ namespace GUI
 		
 		public KHACHHANG()
 		{
-			this._CT_DICHVUNHANPHONGs = new EntitySet<CT_DICHVUNHANPHONG>(new Action<CT_DICHVUNHANPHONG>(this.attach_CT_DICHVUNHANPHONGs), new Action<CT_DICHVUNHANPHONG>(this.detach_CT_DICHVUNHANPHONGs));
+			this._CT_NHANPHONGs = new EntitySet<CT_NHANPHONG>(new Action<CT_NHANPHONG>(this.attach_CT_NHANPHONGs), new Action<CT_NHANPHONG>(this.detach_CT_NHANPHONGs));
 			OnCreated();
 		}
 		
@@ -974,16 +974,16 @@ namespace GUI
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_CT_DICHVUNHANPHONG", Storage="_CT_DICHVUNHANPHONGs", ThisKey="MAKH", OtherKey="MAKH")]
-		public EntitySet<CT_DICHVUNHANPHONG> CT_DICHVUNHANPHONGs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_CT_NHANPHONG", Storage="_CT_NHANPHONGs", ThisKey="MAKH", OtherKey="MAKH")]
+		public EntitySet<CT_NHANPHONG> CT_NHANPHONGs
 		{
 			get
 			{
-				return this._CT_DICHVUNHANPHONGs;
+				return this._CT_NHANPHONGs;
 			}
 			set
 			{
-				this._CT_DICHVUNHANPHONGs.Assign(value);
+				this._CT_NHANPHONGs.Assign(value);
 			}
 		}
 		
@@ -1007,36 +1007,38 @@ namespace GUI
 			}
 		}
 		
-		private void attach_CT_DICHVUNHANPHONGs(CT_DICHVUNHANPHONG entity)
+		private void attach_CT_NHANPHONGs(CT_NHANPHONG entity)
 		{
 			this.SendPropertyChanging();
 			entity.KHACHHANG = this;
 		}
 		
-		private void detach_CT_DICHVUNHANPHONGs(CT_DICHVUNHANPHONG entity)
+		private void detach_CT_NHANPHONGs(CT_NHANPHONG entity)
 		{
 			this.SendPropertyChanging();
 			entity.KHACHHANG = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CT_DICHVUNHANPHONG")]
-	public partial class CT_DICHVUNHANPHONG : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CT_NHANPHONG")]
+	public partial class CT_NHANPHONG : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private string _MAPN;
 		
-		private string _MADV;
-		
 		private string _MAKH;
 		
-		private string _TENDV;
+		private string _MADV;
 		
 		private System.Nullable<int> _SOLUONG;
 		
 		private System.Nullable<int> _DONGIA;
+		
+		private System.Nullable<System.DateTime> _NGAYVAO;
+		
+		private System.Nullable<System.DateTime> _NGAYDI;
 		
 		private EntityRef<DICHVU> _DICHVU;
 		
@@ -1048,19 +1050,21 @@ namespace GUI
     partial void OnCreated();
     partial void OnMAPNChanging(string value);
     partial void OnMAPNChanged();
-    partial void OnMADVChanging(string value);
-    partial void OnMADVChanged();
     partial void OnMAKHChanging(string value);
     partial void OnMAKHChanged();
-    partial void OnTENDVChanging(string value);
-    partial void OnTENDVChanged();
+    partial void OnMADVChanging(string value);
+    partial void OnMADVChanged();
     partial void OnSOLUONGChanging(System.Nullable<int> value);
     partial void OnSOLUONGChanged();
     partial void OnDONGIAChanging(System.Nullable<int> value);
     partial void OnDONGIAChanged();
+    partial void OnNGAYVAOChanging(System.Nullable<System.DateTime> value);
+    partial void OnNGAYVAOChanged();
+    partial void OnNGAYDIChanging(System.Nullable<System.DateTime> value);
+    partial void OnNGAYDIChanged();
     #endregion
 		
-		public CT_DICHVUNHANPHONG()
+		public CT_NHANPHONG()
 		{
 			this._DICHVU = default(EntityRef<DICHVU>);
 			this._KHACHHANG = default(EntityRef<KHACHHANG>);
@@ -1083,30 +1087,6 @@ namespace GUI
 					this._MAPN = value;
 					this.SendPropertyChanged("MAPN");
 					this.OnMAPNChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MADV", DbType="Char(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MADV
-		{
-			get
-			{
-				return this._MADV;
-			}
-			set
-			{
-				if ((this._MADV != value))
-				{
-					if (this._DICHVU.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMADVChanging(value);
-					this.SendPropertyChanging();
-					this._MADV = value;
-					this.SendPropertyChanged("MADV");
-					this.OnMADVChanged();
 				}
 			}
 		}
@@ -1135,22 +1115,26 @@ namespace GUI
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENDV", DbType="NVarChar(50)")]
-		public string TENDV
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MADV", DbType="Char(10)")]
+		public string MADV
 		{
 			get
 			{
-				return this._TENDV;
+				return this._MADV;
 			}
 			set
 			{
-				if ((this._TENDV != value))
+				if ((this._MADV != value))
 				{
-					this.OnTENDVChanging(value);
+					if (this._DICHVU.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMADVChanging(value);
 					this.SendPropertyChanging();
-					this._TENDV = value;
-					this.SendPropertyChanged("TENDV");
-					this.OnTENDVChanged();
+					this._MADV = value;
+					this.SendPropertyChanged("MADV");
+					this.OnMADVChanged();
 				}
 			}
 		}
@@ -1195,7 +1179,47 @@ namespace GUI
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DICHVU_CT_DICHVUNHANPHONG", Storage="_DICHVU", ThisKey="MADV", OtherKey="MADV", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYVAO", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NGAYVAO
+		{
+			get
+			{
+				return this._NGAYVAO;
+			}
+			set
+			{
+				if ((this._NGAYVAO != value))
+				{
+					this.OnNGAYVAOChanging(value);
+					this.SendPropertyChanging();
+					this._NGAYVAO = value;
+					this.SendPropertyChanged("NGAYVAO");
+					this.OnNGAYVAOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYDI", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NGAYDI
+		{
+			get
+			{
+				return this._NGAYDI;
+			}
+			set
+			{
+				if ((this._NGAYDI != value))
+				{
+					this.OnNGAYDIChanging(value);
+					this.SendPropertyChanging();
+					this._NGAYDI = value;
+					this.SendPropertyChanged("NGAYDI");
+					this.OnNGAYDIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DICHVU_CT_NHANPHONG", Storage="_DICHVU", ThisKey="MADV", OtherKey="MADV", IsForeignKey=true)]
 		public DICHVU DICHVU
 		{
 			get
@@ -1212,12 +1236,12 @@ namespace GUI
 					if ((previousValue != null))
 					{
 						this._DICHVU.Entity = null;
-						previousValue.CT_DICHVUNHANPHONGs.Remove(this);
+						previousValue.CT_NHANPHONGs.Remove(this);
 					}
 					this._DICHVU.Entity = value;
 					if ((value != null))
 					{
-						value.CT_DICHVUNHANPHONGs.Add(this);
+						value.CT_NHANPHONGs.Add(this);
 						this._MADV = value.MADV;
 					}
 					else
@@ -1229,7 +1253,7 @@ namespace GUI
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_CT_DICHVUNHANPHONG", Storage="_KHACHHANG", ThisKey="MAKH", OtherKey="MAKH", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_CT_NHANPHONG", Storage="_KHACHHANG", ThisKey="MAKH", OtherKey="MAKH", IsForeignKey=true)]
 		public KHACHHANG KHACHHANG
 		{
 			get
@@ -1246,12 +1270,12 @@ namespace GUI
 					if ((previousValue != null))
 					{
 						this._KHACHHANG.Entity = null;
-						previousValue.CT_DICHVUNHANPHONGs.Remove(this);
+						previousValue.CT_NHANPHONGs.Remove(this);
 					}
 					this._KHACHHANG.Entity = value;
 					if ((value != null))
 					{
-						value.CT_DICHVUNHANPHONGs.Add(this);
+						value.CT_NHANPHONGs.Add(this);
 						this._MAKH = value.MAKH;
 					}
 					else

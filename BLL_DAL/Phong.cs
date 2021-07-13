@@ -105,22 +105,5 @@ namespace BLL_DAL
                 return false;
             }
         }
-
-        public bool Update(string aMAPHONG, int aTRANGTHAI, int aSUCCHUA)
-        {
-            try
-            {
-                PHONG UpdateP = db.PHONGs.Where(t => t.MAPHONG == aMAPHONG).First();
-                db.SubmitChanges();
-                return true;
-
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        
     }
 }

@@ -14,15 +14,17 @@ namespace GUI
 {
     public partial class CT_NhanPhong : Form
     {
+        HotelManagerDataContext db = new HotelManagerDataContext();
         DichVuNhanPhong np = new DichVuNhanPhong();
         DichVu dv = new DichVu();
         Phong p = new Phong();
         KhachHang kh = new KhachHang();
+        CT_NHANPHONG ctnp = new CT_NHANPHONG();
         public CT_NhanPhong()
         {
             InitializeComponent();
         }
-
+       
         private void CT_NhanPhong_Load(object sender, EventArgs e)
         {
             txtGiaPhong.Text = FormMain.GiaPhong.ToString();
@@ -34,10 +36,7 @@ namespace GUI
             CBKH.ValueMember = "MAKH";
             CBKH.DataSource = kh.GetDataKHs();
 
-            DGVNhanPhong.DataSource = np.getData(); 
-            
-            
-             
+            DGVNhanPhong.DataSource = np.getData();       
         }       
         private void BtnThem_Click(object sender, EventArgs e)
         {
@@ -48,7 +47,7 @@ namespace GUI
                 txtMaPhieuNhap.Select();
                 return;
             }
-            if (DTPIn.Value < DTPout.Value)
+            if (DTPIn.Value > DTPout.Value)
             {
                 MessageBox.Show("Ngày Checkin phải nhỏ hơn ngày Checkout", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DTPIn.Select();
@@ -62,9 +61,8 @@ namespace GUI
                 return;
                 
             }
-
-            np.Add(txtMaPhieuNhap.Text, CBKH.SelectedValue.ToString(), CBMADV.SelectedValue.ToString(), int.Parse(txtSLDv.Text),FormMain.GiaPhong);
-            
+            np.Add(txtMaPhieuNhap.Text, CBKH.SelectedValue.ToString(), CBMADV.SelectedValue.ToString(), int.Parse(txtSLDv.Text), FormMain.GiaPhong, DTPIn.Value, DTPout.Value);
+            db.SubmitChanges();
             DGVNhanPhong.DataSource = np.getData();
             MessageBox.Show("Thêm thành công");
             txtMaPhieuNhap.Text = txtSLDv.Text = null;
@@ -83,9 +81,9 @@ namespace GUI
             MessageBox.Show("Xóa thành công");
             txtMaPhieuNhap.Clear();
             
-            txtSLDv.Clear();
+            //txtSLDv.Clear();
         }
-
+        
         private void BTNSua_Click(object sender, EventArgs e)
         {
             if (r == null)
@@ -94,9 +92,13 @@ namespace GUI
                 return;
             }
 
-            np.Update(txtMaPhieuNhap.Text,CBKH.SelectedValue.ToString(), CBMADV.SelectedValue.ToString(), int.Parse(txtSLDv.Text));
-            MessageBox.Show("Cập nhật thông tin phiếu nhập thành công");
+            var dv = db.CT_NHANPHONGs.SingleOrDefault(x => x.MAPN == r.Cells["MAPN"].Value.ToString());
+            dv.MADV = CBMADV.SelectedValue.ToString();
+            dv.MAKH = CBKH.SelectedValue.ToString();
+            dv.SOLUONG = int.Parse(txtSLDv.Text);
+            db.SubmitChanges();
             DGVNhanPhong.DataSource = np.getData();
+            MessageBox.Show("Cập nhật thông tin phiếu nhập thành công");
             txtMaPhieuNhap.Text =  txtSLDv.Text = null;
         }
 
@@ -109,7 +111,6 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             //Button Save
             
         }
@@ -124,6 +125,15 @@ namespace GUI
             }
               
         }
+
+        private void BtnTaoHD_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHoaDon fhd = new FormHoaDon();
+            fhd.ShowDialog();
+        }
+
+        
 
     }
 }

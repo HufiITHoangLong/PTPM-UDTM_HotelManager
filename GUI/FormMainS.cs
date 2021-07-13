@@ -53,5 +53,65 @@ namespace GUI
             FormKhachHang fkh = new FormKhachHang();
             fkh.ShowDialog();
         }
+        public static int GiaPhong;
+        private void btnTPT1_Click(object sender, EventArgs e)
+        {
+            GiaPhong = 400000;
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            GiaPhong = 600000;
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GiaPhong = 400000;
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GiaPhong = 600000;
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            GiaPhong = 900000;
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            GiaPhong = 900000;
+            this.Hide();
+            CT_NhanPhong ctnp = new CT_NhanPhong();
+            ctnp.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BTNDangXuat_Click(object sender, EventArgs e)
+        {
+            FormDangNhap fdn = new FormDangNhap();
+            fdn.Show();
+            this.Hide();
+        }
     }
 }

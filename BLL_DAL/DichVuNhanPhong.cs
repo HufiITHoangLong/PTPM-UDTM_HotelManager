@@ -24,8 +24,10 @@ namespace BLL_DAL
                        {
                            dvnps.MAPN,
                            kh.TENKH,
-                           dv.TENDV,            
-                           dvnps.SOLUONG,   
+                           dvnps.MADV,
+                           dvnps.SOLUONG,
+                           dvnps.NGAYVAO,
+                           dvnps.NGAYDI,
                        };
             return dvnp;
         }
@@ -39,45 +41,31 @@ namespace BLL_DAL
             return dglp;
         }
 
-        public bool Add(string aMapn, string aMakh, string aMaDV,int aSoluong, int aGiaPhong)
+        public bool Add(string aMapn, string aMakh, string aMaDV, int aSoluong, int aGiaPhong, DateTime aNgayVao, DateTime aNgayRa)
         {
             CT_NHANPHONG dvnp = new CT_NHANPHONG
-                {
-                    MAPN = aMapn,
-                    MAKH = aMakh,
-                    MADV = aMaDV,
-                    SOLUONG = aSoluong,      
-                    DONGIA = aGiaPhong,                  
-                };
+            {
+                MAPN = aMapn,
+                MAKH = aMakh,
+                MADV = aMaDV,
+                SOLUONG = aSoluong,
+                DONGIA = aGiaPhong,
+                NGAYVAO = aNgayVao,
+                NGAYDI = aNgayRa,
+            };
             db.CT_NHANPHONGs.InsertOnSubmit(dvnp);
-                db.SubmitChanges();
-                return true;
-            
-        }
-
-        public bool Delete(string aMapn)
-        {
-                CT_NHANPHONG XoaPN = db.CT_NHANPHONGs.Where(t => t.MAPN == aMapn).First();
-                db.CT_NHANPHONGs.DeleteOnSubmit(XoaPN);
-                db.SubmitChanges();
-                return true;
-        }
-
-        public bool Update(string aMapn, string aMakh, string aMaDV, int aSoluong)
-        {
-            CT_NHANPHONG UpdatePN = db.CT_NHANPHONGs.Where(t => t.MAPN == aMapn).FirstOrDefault();
-            db.CT_NHANPHONGs.InsertOnSubmit(UpdatePN);
             db.SubmitChanges();
-                return true;
+            return true;
 
-            
         }
 
+        public bool Delete(string aMAPN)
+        {
+                CT_NHANPHONG Xoact = db.CT_NHANPHONGs.Where(x => x.MAPN == aMAPN).First();
+                db.CT_NHANPHONGs.DeleteOnSubmit(Xoact);
+                db.SubmitChanges();
+                return true;
+        }
 
-
-
-        
     }
-    
-   
 }

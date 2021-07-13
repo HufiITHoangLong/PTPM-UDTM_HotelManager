@@ -53,6 +53,11 @@ namespace GUI
             
         }
 
+        public void SetRoom()
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -107,7 +112,6 @@ namespace GUI
         private void btnTPV1_Click(object sender, EventArgs e)
         {
             GiaPhong = 900000;
-            btnTPV1.BackColor = Color.Lime;
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
@@ -124,7 +128,6 @@ namespace GUI
         private void btnTPD2_Click(object sender, EventArgs e)
         {
             GiaPhong = 600000;
-            btnTPD2.BackColor = Color.Lime;
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
@@ -141,7 +144,6 @@ namespace GUI
         private void btnTPV2_Click(object sender, EventArgs e)
         {
             GiaPhong = 900000;
-            btnTPV2.BackColor = Color.Lime;
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
@@ -156,55 +158,52 @@ namespace GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             labelNgayDenpt1.Text = "...";
             LabelNgayDipt1.Text = "...";
-            labelSoKOpt1.Text = "...";
-            btnTPT1.BackColor = Color.Red;
+            
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             labelNgayDenpv2.Text = "...";
             LabelNgayDipv2.Text = "...";
-            labelSoKOpv2.Text = "...";
-            btnTPV2.BackColor = Color.Red;
+            
+            
         }
 
         private void btnOutpd1_Click(object sender, EventArgs e)
         {
             labelNgayDenpd1.Text = "...";
             LabelNgayDipd1.Text = "...";
-            labelSoKOpd1.Text = "...";
-            btnTPD1.BackColor = Color.Red;
+            
+            
         }
 
         private void btnOutpv1_Click(object sender, EventArgs e)
         {
             labelNgayDenpv1.Text = "...";
             LabelNgayDipv1.Text = "...";
-            labelSoKOpv1.Text = "...";
-            btnTPV1.BackColor = Color.Red;
+            
+           
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             labelNgayDenpt2.Text = "...";
             LabelNgayDipt2.Text = "...";
-            labelSoKOpt2.Text = "...";
-            btnTPT2.BackColor = Color.Red;
+            
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             labelNgayDenpd2.Text = "...";
             LabelNgayDipd2.Text = "...";
-            labelSoKOpd2.Text = "...";
-            btnTPD2.BackColor = Color.Red;
+            
+            
         }
-
-       
-
-        
 
         }
     }

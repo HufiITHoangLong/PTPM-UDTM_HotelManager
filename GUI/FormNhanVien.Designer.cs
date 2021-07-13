@@ -41,8 +41,6 @@
             this.BTNThem = new System.Windows.Forms.Button();
             this.BTNXoa = new System.Windows.Forms.Button();
             this.BTNSua = new System.Windows.Forms.Button();
-            this.CBBQuyen = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.BTNTroVe = new System.Windows.Forms.Button();
             this.textBoxPhone1 = new LibraryCustomControl.TextBoxPhone();
             ((System.ComponentModel.ISupportInitialize)(this.DGVNhanVien)).BeginInit();
@@ -149,7 +147,7 @@
             // 
             this.BTNThem.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNThem.ForeColor = System.Drawing.Color.Brown;
-            this.BTNThem.Location = new System.Drawing.Point(51, 221);
+            this.BTNThem.Location = new System.Drawing.Point(61, 177);
             this.BTNThem.Name = "BTNThem";
             this.BTNThem.Size = new System.Drawing.Size(213, 47);
             this.BTNThem.TabIndex = 7;
@@ -161,7 +159,7 @@
             // 
             this.BTNXoa.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNXoa.ForeColor = System.Drawing.Color.Brown;
-            this.BTNXoa.Location = new System.Drawing.Point(51, 283);
+            this.BTNXoa.Location = new System.Drawing.Point(61, 246);
             this.BTNXoa.Name = "BTNXoa";
             this.BTNXoa.Size = new System.Drawing.Size(213, 47);
             this.BTNXoa.TabIndex = 8;
@@ -173,7 +171,7 @@
             // 
             this.BTNSua.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSua.ForeColor = System.Drawing.Color.Brown;
-            this.BTNSua.Location = new System.Drawing.Point(51, 348);
+            this.BTNSua.Location = new System.Drawing.Point(61, 315);
             this.BTNSua.Name = "BTNSua";
             this.BTNSua.Size = new System.Drawing.Size(213, 47);
             this.BTNSua.TabIndex = 9;
@@ -181,30 +179,11 @@
             this.BTNSua.UseVisualStyleBackColor = true;
             this.BTNSua.Click += new System.EventHandler(this.BTNSua_Click);
             // 
-            // CBBQuyen
-            // 
-            this.CBBQuyen.FormattingEnabled = true;
-            this.CBBQuyen.Location = new System.Drawing.Point(142, 161);
-            this.CBBQuyen.Name = "CBBQuyen";
-            this.CBBQuyen.Size = new System.Drawing.Size(151, 24);
-            this.CBBQuyen.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Brown;
-            this.label6.Location = new System.Drawing.Point(47, 159);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 24);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Quyền";
-            // 
             // BTNTroVe
             // 
             this.BTNTroVe.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNTroVe.ForeColor = System.Drawing.Color.Brown;
-            this.BTNTroVe.Location = new System.Drawing.Point(51, 411);
+            this.BTNTroVe.Location = new System.Drawing.Point(61, 394);
             this.BTNTroVe.Name = "BTNTroVe";
             this.BTNTroVe.Size = new System.Drawing.Size(213, 47);
             this.BTNTroVe.TabIndex = 10;
@@ -227,7 +206,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1050, 487);
             this.Controls.Add(this.textBoxPhone1);
-            this.Controls.Add(this.CBBQuyen);
             this.Controls.Add(this.BTNTroVe);
             this.Controls.Add(this.BTNSua);
             this.Controls.Add(this.BTNXoa);
@@ -239,7 +217,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TBUser);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -267,8 +244,6 @@
         private System.Windows.Forms.Button BTNThem;
         private System.Windows.Forms.Button BTNXoa;
         private System.Windows.Forms.Button BTNSua;
-        private System.Windows.Forms.ComboBox CBBQuyen;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BTNTroVe;
         private LibraryCustomControl.TextBoxPhone textBoxPhone1;
     }
