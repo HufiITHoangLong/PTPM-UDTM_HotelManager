@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DichVu.cs" />
+    <Compile Include="DichVuNhanPhong.cs" />
     <Compile Include="HotelManager.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

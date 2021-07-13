@@ -53,6 +53,16 @@ namespace BLL_DAL
             }
         }
 
+        public IQueryable GetDataKHs()
+        {
+            var kh = from khs in db.KHACHHANGs
+                     select new
+                     {
+                         khs.MAKH,
+                         khs.TENKH
+                     };
+            return kh;
+        }
         public bool Delete(string aMAKH)
         {
             try

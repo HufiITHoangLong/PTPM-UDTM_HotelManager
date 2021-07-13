@@ -9,22 +9,6 @@
       <Association Name="LOAIPHONG_PHONG" Member="LOAIPHONG" ThisKey="MALOAIPHONG" OtherKey="MALOAIPHONG" Type="LOAIPHONG" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.CT_NHANPHONG" Member="CT_NHANPHONGs">
-    <Type Name="CT_NHANPHONG">
-      <Column Name="MAPHIEUNHAP" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TENKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="LOAIPHONG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="CMND" Type="System.String" DbType="Char(14)" CanBeNull="true" />
-      <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
-      <Column Name="NGAYNHAN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="NGAYTRA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="GIAPHONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MADV" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Column Name="TENDV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SOLUONGDV" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="DICHVU_CT_NHANPHONG" Member="DICHVU" ThisKey="MADV" OtherKey="MADV" Type="DICHVU" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.DICHVU" Member="DICHVUs">
     <Type Name="DICHVU">
       <Column Name="MADV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -61,6 +45,18 @@
       <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
       <Column Name="DTHOAI" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="DCHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="KHACHHANG_CT_NHANPHONG" Member="CT_NHANPHONGs" ThisKey="MAKH" OtherKey="MAKH" Type="CT_NHANPHONG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CT_NHANPHONG" Member="CT_NHANPHONGs">
+    <Type Name="CT_NHANPHONG">
+      <Column Name="MAPN" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAKH" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MADV" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DONGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DICHVU_CT_NHANPHONG" Member="DICHVU" ThisKey="MADV" OtherKey="MADV" Type="DICHVU" IsForeignKey="true" />
+      <Association Name="KHACHHANG_CT_NHANPHONG" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

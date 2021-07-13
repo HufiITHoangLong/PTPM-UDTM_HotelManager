@@ -17,6 +17,18 @@ namespace BLL_DAL
             var dv = from dvs in data.DICHVUs
                      select new
                      {                     
+                         dvs.MADV,
+                         dvs.TENDV
+                     };
+            return dv;
+        }
+
+        public IQueryable getMaDV()
+        {
+            var dv = from dvs in data.DICHVUs
+                     select new
+                     {
+                         dvs.MADV,
                          dvs.TENDV
                      };
             return dv;

@@ -29,6 +29,16 @@ namespace BLL_DAL
             return data;
         }
 
+        public IQueryable getMaLP()
+        {
+            var lp = from lps in db.LOAIPHONGs
+                     select new
+                     {
+                         lps.DONGIA
+                     };
+            return lp;
+        }
+
         public IQueryable getSC()
         {
             var sc = from scs in db.PHONGs

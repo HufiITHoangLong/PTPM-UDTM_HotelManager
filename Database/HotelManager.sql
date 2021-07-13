@@ -58,26 +58,26 @@ select TenLoaiPhong
 from LOAIPHONG
 WHERE MALOAIPHONG = 2
 
+
 Create table CT_NHANPHONG
 (
-	MAPHIEUNHAP char(10) not null,
-	TENKH nvarchar(50),
-	LOAIPHONG nvarchar(50),
-	CMND char (14),
-	GIOITINH nvarchar(6),
-	NGAYNHAN datetime,
-	NGAYTRA datetime,
-	GIAPHONG int,
-	MADV char(10),
-	TENDV nvarchar(50),
-	SOLUONGDV int
-	PRIMARY KEY(MAPHIEUNHAP),
-	Constraint FK_DV FOREIGN KEY (MADV) references DICHVU (MADV)
+	MAPN char(10) not null,
+	MAKH char(10),
+	MADV char(10),	
+	SOLUONG int,
+	DONGIA int,
+	PRIMARY KEY(MAPN),
+	CONSTRAINT FK_DVNP FOREIGN KEY (MADV) REFERENCES DICHVU (MADV),
+	CONSTRAINT FK_KH FOREIGN KEY (MAKH) REFERENCES KHACHHANG (MAKH)
 )
+
+select * from CT_NHANPHONG
+
+DROP TABLE CT_NHANPHONG
 
 Create table DICHVU
 (
-	MADV char(10) not null,
+	MADV char(10),
 	TENDV nvarchar(50),
 	DONGIA int,
 	PRIMARY KEY (MADV)
@@ -92,6 +92,8 @@ VALUES ('DV01', N'Giặt ủi quần áo', 50000),
 
 select * from DICHVU
 
+DROP TABLE DICHVU
+
 Create table KHACHHANG
 (
 	MAKH char(10) not null,
@@ -103,10 +105,16 @@ Create table KHACHHANG
 	PRIMARY KEY (MAKH)
 )
 
-Select * from NHANVIEN
+Select * from KHACHHANG
 
 INSERT INTO KHACHHANG
 VALUES ('KH01', N'Nguyễn Văn Phú', '2509281932','Nam', '0985326741', N'Quận 4, Thành phố Hồ Chí Minh'),
 ('KH02', N'Lê Thị Mỹ Vân', '3002486612',N'Nữ', '0153692874', N'Quận Tân Bình, Thành phố Hồ Chí Minh'),
 ('KH03', N'Trần Đức Ninh', '369281751','Nam', '0659182741', N'Đức Hòa, Long An'),
 ('KH04', N'Ngô Thành Nam', '326281699','Nam' ,'0362951847', N'Quận 2, Thành phố Hồ Chí Minh')
+
+INSERT INTO KHACHHANG
+VALUES ('KH05', N'Khách vãng lai', null, null, null,null)
+
+INSERT INTO CT_NHANPHONG
+VALUES ('pn1', 'KH05', 'DV01', 3, 400000)
