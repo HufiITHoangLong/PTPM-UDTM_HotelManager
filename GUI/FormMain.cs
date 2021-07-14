@@ -16,27 +16,12 @@ namespace GUI
         Phong p = new Phong();
         HoaDonPH hd = new HoaDonPH();
         HotelManagerDataContext db = new HotelManagerDataContext();
+        CTHD ct = new CTHD();
         public FormMain()
         {
             InitializeComponent();
         }    
-        //public void Quyen()
-        //{
-
-        //    if (q.QUYEN == "Admin")
-        //    {
-        //        MessageBox.Show("Xin chào " + q.QUYEN, "Thông báo", MessageBoxButtons.OK);
-        //        BTNNhanVien.Enabled = true;
-        //        BTNThongKe.Enabled = true;
-        //        BTNDichVu.Enabled = true;
-        //    }
-        //    else
-        //    {
-        //        BTNNhanVien.Enabled = false;
-        //        BTNThongKe.Enabled = false;
-        //        BTNDichVu.Enabled = false;
-        //    }
-        //}
+        
         private void FormMain_Load(object sender, EventArgs e)
         {
             LabelXinChaoAd.Text = "Administrator";
@@ -88,13 +73,7 @@ namespace GUI
             fkh.ShowDialog();
         }
 
-        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormThongKe ftk = new FormThongKe();
-            ftk.ShowDialog();
-        }
-
+        
         private void liênHệToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -125,10 +104,9 @@ namespace GUI
             this.Hide();
             CT_NhanPhong ctnp = new CT_NhanPhong();
             ctnp.ShowDialog();
-        }
-       
+        }    
         private void button2_Click(object sender, EventArgs e)
-        {
+        {   
             this.Hide();
             FormChiTietHD fcthd = new FormChiTietHD();
             fcthd.ShowDialog();

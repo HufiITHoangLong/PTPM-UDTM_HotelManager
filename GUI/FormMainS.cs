@@ -19,7 +19,6 @@ namespace GUI
 
         private void FormMainS_Load(object sender, EventArgs e)
         {
-            
             LabelXinChaoStaff.Text = "Staff";
             string[] thu = { "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy", "Chủ Nhật" };
             int ngay = DateTime.Now.DayOfWeek.GetHashCode();
@@ -70,22 +69,6 @@ namespace GUI
             ctnp.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            GiaPhong = 400000;
-            this.Hide();
-            CT_NhanPhong ctnp = new CT_NhanPhong();
-            ctnp.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            GiaPhong = 600000;
-            this.Hide();
-            CT_NhanPhong ctnp = new CT_NhanPhong();
-            ctnp.ShowDialog();
-        }
-
         private void button8_Click(object sender, EventArgs e)
         {
             GiaPhong = 900000;
@@ -94,13 +77,6 @@ namespace GUI
             ctnp.ShowDialog();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            GiaPhong = 900000;
-            this.Hide();
-            CT_NhanPhong ctnp = new CT_NhanPhong();
-            ctnp.ShowDialog();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -112,6 +88,30 @@ namespace GUI
             FormDangNhap fdn = new FormDangNhap();
             fdn.Show();
             this.Hide();
+        }
+
+        private void btnOutpt1_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            FormChiTietHD fcthd = new FormChiTietHD();
+            fcthd.ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            FormChiTietHD fcthd = new FormChiTietHD();
+            fcthd.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            FormChiTietHD fcthd = new FormChiTietHD();
+            fcthd.ShowDialog();
         }
     }
 }

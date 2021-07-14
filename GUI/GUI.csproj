@@ -44,6 +44,8 @@
     <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Compression.Base">
       <HintPath>..\..\hoc\DemoBuoi7\Add\Syncfusion.Compression.Base.dll</HintPath>
     </Reference>
@@ -56,6 +58,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -129,17 +132,22 @@
     <Compile Include="FormPhong.Designer.cs">
       <DependentUpon>FormPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThongKe.cs">
+    <Compile Include="FormTK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThongKe.Designer.cs">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
+    <Compile Include="FormTK.Designer.cs">
+      <DependentUpon>FormTK.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="HotelManager.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelManager.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel_ManagerDataSet_ThongKe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hotel_ManagerDataSet_ThongKe.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,9 +179,13 @@
     <EmbeddedResource Include="FormPhong.resx">
       <DependentUpon>FormPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="HotelManager.dbml.layout">
       <DependentUpon>HotelManager.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="FormTK.resx">
+      <DependentUpon>FormTK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -188,6 +200,17 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>HotelManager.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Hotel_ManagerDataSet_ThongKe.xsc">
+      <DependentUpon>Hotel_ManagerDataSet_ThongKe.xsd</DependentUpon>
+    </None>
+    <None Include="Hotel_ManagerDataSet_ThongKe.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hotel_ManagerDataSet_ThongKe.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hotel_ManagerDataSet_ThongKe.xss">
+      <DependentUpon>Hotel_ManagerDataSet_ThongKe.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -7,7 +7,6 @@
       <Column Name="SUCCHUA" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MALOAIPHONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="PHONG_HOADONPH" Member="HOADONPHs" ThisKey="MAPHONG" OtherKey="MAPH" Type="HOADONPH" />
-      <Association Name="PHONG_CHITIETHD" Member="CHITIETHDs" ThisKey="MAPHONG" OtherKey="MAPH" Type="CHITIETHD" />
       <Association Name="LOAIPHONG_PHONG" Member="LOAIPHONG" ThisKey="MALOAIPHONG" OtherKey="MALOAIPHONG" Type="LOAIPHONG" IsForeignKey="true" />
     </Type>
   </Table>
@@ -61,7 +60,6 @@
       <Column Name="DONGIAP" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NGAYVAO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="NGAYRA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="HOADONPH_CHITIETHD" Member="CHITIETHD" ThisKey="MAHD" OtherKey="MAHD" Type="CHITIETHD" Cardinality="One" />
       <Association Name="DICHVU_HOADONPH" Member="DICHVU" ThisKey="MADV" OtherKey="MADV" Type="DICHVU" IsForeignKey="true" />
       <Association Name="KHACHHANG_HOADONPH" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
       <Association Name="PHONG_HOADONPH" Member="PHONG" ThisKey="MAPH" OtherKey="MAPHONG" Type="PHONG" IsForeignKey="true" />
@@ -70,13 +68,9 @@
   <Table Name="dbo.CHITIETHD" Member="CHITIETHDs">
     <Type Name="CHITIETHD">
       <Column Name="MAHD" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MAPH" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Column Name="TENKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="TONGTIENDV" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TONGTIENPHONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="THANHTIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="HOADONPH_CHITIETHD" Member="HOADONPH" ThisKey="MAHD" OtherKey="MAHD" Type="HOADONPH" IsForeignKey="true" />
-      <Association Name="PHONG_CHITIETHD" Member="PHONG" ThisKey="MAPH" OtherKey="MAPHONG" Type="PHONG" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

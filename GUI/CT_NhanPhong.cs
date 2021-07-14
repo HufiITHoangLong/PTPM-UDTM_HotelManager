@@ -19,6 +19,7 @@ namespace GUI
         Phong p = new Phong();
         KhachHang kh = new KhachHang();
         HoaDonPH hd = new HoaDonPH();
+        CTHD ct = new CTHD();
         public CT_NhanPhong()
         {
             InitializeComponent();
@@ -91,11 +92,11 @@ namespace GUI
 
             hd.Delete(txtMaHD.Text);
             DGVNhanPhong.DataSource = hd.getData();
-            string idp = CBBMAPhong.SelectedValue.ToString();
-            var ttp = db.PHONGs.SingleOrDefault(x => x.MAPHONG == idp);
-            ttp.TRANGTHAI = 0;
-            db.SubmitChanges();
-            CBBMAPhong.DataSource = p.GetMP();
+            //string idp = CBBMAPhong.SelectedValue.ToString();
+            //var ttp = db.PHONGs.SingleOrDefault(x => x.MAPHONG == idp);
+            //ttp.TRANGTHAI = 0;
+            //db.SubmitChanges();
+            //CBBMAPhong.DataSource = p.GetMP();
             MessageBox.Show("Xóa thành công");
             txtMaHD.Clear();
             txtSLDv.Clear();
@@ -117,11 +118,6 @@ namespace GUI
             update.SOLUONGDV = int.Parse(txtSLDv.Text);
             update.DONGIADV = int.Parse(txtDGDV.Text);
             update.NGAYRA = DTPIn.Value;
-            string idp = CBBMAPhong.SelectedValue.ToString();
-            var ttp = db.PHONGs.SingleOrDefault(x => x.MAPHONG == idp);
-            ttp.TRANGTHAI = 1;
-            db.SubmitChanges();
-            CBBMAPhong.DataSource = p.GetMP();
             DGVNhanPhong.DataSource = hd.getData();
             MessageBox.Show("Cập nhật thông tin phiếu nhập thành công");
             txtMaHD.Text = txtSLDv.Text = txtDGDV.Text = null;
@@ -144,5 +140,10 @@ namespace GUI
             }
               
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }   
     }
 }

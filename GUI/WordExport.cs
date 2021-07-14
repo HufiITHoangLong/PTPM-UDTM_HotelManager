@@ -16,7 +16,7 @@ namespace DemoBuoi7
         #region ---- Constants & Enum -----
 
         
-        private const string FILE_TOKHAIYTE = "BM11";
+        private const string FILE_TOKHAIYTE = "PTPM-UDTM_HotelManager";
          
 
         #endregion
@@ -194,7 +194,7 @@ namespace DemoBuoi7
 
         #endregion
 
-        public void ToKhaiYTe(string pDiaChi, string pSoToKhai, string pNgay, string pThang, string pNam, string pHoTen, string pCMND, string pDienThoai)
+        public void ToKhaiYTe(string pDiaChi, string pSoToKhai, string pNgay, string pThang, string pNam, string pHotenKH, string pCMND, string pDienThoai)
         {
             #region ===== Core======
             MemoryStream mStream = null;
@@ -244,10 +244,10 @@ namespace DemoBuoi7
 
 
 
-            string[] fields = new string[] { "DiaChi", "SpToKhai", "Ngay", "Thang", "Nam", "HoVaTen", "CMND", "DienThoai"};
+            string[] fields = new string[] { "DiaChi", "SoToKhai", "Ngay", "Thang", "Nam", "HotenKH", "CMND", "DienThoai" };
 
 
-            string[] values = new string[] { pDiaChi, pSoToKhai, pNgay, pThang, pNam, pHoTen, pCMND, pDienThoai};
+            string[] values = new string[] { pDiaChi, pSoToKhai, pNgay, pThang, pNam, pHotenKH, pCMND, pDienThoai};
 
             #endregion End Set Value=====
 

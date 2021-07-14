@@ -41,7 +41,6 @@ namespace GUI
                 return;
             }
             var updatenv = db.NHANVIENs.FirstOrDefault(x => x.USERNAME == r.Cells["USERNAME"].Value.ToString());
-            updatenv.USERNAME = TBUser.Text;
             updatenv.PASSWORD = tbPass.Text;
             updatenv.HOTENNV = tbHoTen.Text;
             updatenv.DIENTHOAI = textBoxPhone1.Text;

@@ -83,7 +83,7 @@
             this.LabelNv});
             this.statusStrip1.Location = new System.Drawing.Point(0, 737);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1075, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1191, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -109,9 +109,9 @@
             this.BTNDangXuat.BackColor = System.Drawing.Color.White;
             this.BTNDangXuat.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNDangXuat.ForeColor = System.Drawing.Color.Red;
-            this.BTNDangXuat.Location = new System.Drawing.Point(715, 671);
+            this.BTNDangXuat.Location = new System.Drawing.Point(769, 671);
             this.BTNDangXuat.Name = "BTNDangXuat";
-            this.BTNDangXuat.Size = new System.Drawing.Size(159, 42);
+            this.BTNDangXuat.Size = new System.Drawing.Size(202, 42);
             this.BTNDangXuat.TabIndex = 9;
             this.BTNDangXuat.Text = "Đăng Xuất";
             this.BTNDangXuat.UseVisualStyleBackColor = false;
@@ -122,7 +122,7 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(895, 670);
+            this.button1.Location = new System.Drawing.Point(977, 670);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 42);
             this.button1.TabIndex = 8;
@@ -160,7 +160,7 @@
             this.liênHệToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1075, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1191, 28);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -196,7 +196,7 @@
             // 
             this.btnTPT1.BackColor = System.Drawing.Color.White;
             this.btnTPT1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTPT1.Location = new System.Drawing.Point(41, 285);
+            this.btnTPT1.Location = new System.Drawing.Point(85, 268);
             this.btnTPT1.Name = "btnTPT1";
             this.btnTPT1.Size = new System.Drawing.Size(76, 36);
             this.btnTPT1.TabIndex = 18;
@@ -208,7 +208,7 @@
             // 
             this.btnTPD1.BackColor = System.Drawing.Color.White;
             this.btnTPD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnTPD1.Location = new System.Drawing.Point(41, 441);
+            this.btnTPD1.Location = new System.Drawing.Point(85, 424);
             this.btnTPD1.Name = "btnTPD1";
             this.btnTPD1.Size = new System.Drawing.Size(76, 36);
             this.btnTPD1.TabIndex = 18;
@@ -220,7 +220,7 @@
             // 
             this.btnTPV1.BackColor = System.Drawing.Color.White;
             this.btnTPV1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnTPV1.Location = new System.Drawing.Point(41, 606);
+            this.btnTPV1.Location = new System.Drawing.Point(85, 589);
             this.btnTPV1.Name = "btnTPV1";
             this.btnTPV1.Size = new System.Drawing.Size(76, 36);
             this.btnTPV1.TabIndex = 18;
@@ -244,7 +244,7 @@
             // 
             this.btnOutpt1.BackColor = System.Drawing.Color.White;
             this.btnOutpt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnOutpt1.Location = new System.Drawing.Point(133, 285);
+            this.btnOutpt1.Location = new System.Drawing.Point(177, 268);
             this.btnOutpt1.Name = "btnOutpt1";
             this.btnOutpt1.Size = new System.Drawing.Size(76, 36);
             this.btnOutpt1.TabIndex = 19;
@@ -256,7 +256,7 @@
             // 
             this.btnOutpd1.BackColor = System.Drawing.Color.White;
             this.btnOutpd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnOutpd1.Location = new System.Drawing.Point(133, 441);
+            this.btnOutpd1.Location = new System.Drawing.Point(177, 424);
             this.btnOutpd1.Name = "btnOutpd1";
             this.btnOutpd1.Size = new System.Drawing.Size(76, 36);
             this.btnOutpd1.TabIndex = 19;
@@ -268,7 +268,7 @@
             // 
             this.btnOutpv1.BackColor = System.Drawing.Color.White;
             this.btnOutpv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnOutpv1.Location = new System.Drawing.Point(133, 606);
+            this.btnOutpv1.Location = new System.Drawing.Point(177, 589);
             this.btnOutpv1.Name = "btnOutpv1";
             this.btnOutpv1.Size = new System.Drawing.Size(76, 36);
             this.btnOutpv1.TabIndex = 19;
@@ -307,7 +307,7 @@
             // 
             this.labelpt1.AutoSize = true;
             this.labelpt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelpt1.Location = new System.Drawing.Point(35, 222);
+            this.labelpt1.Location = new System.Drawing.Point(79, 205);
             this.labelpt1.Name = "labelpt1";
             this.labelpt1.Size = new System.Drawing.Size(216, 36);
             this.labelpt1.TabIndex = 20;
@@ -317,7 +317,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 373);
+            this.label5.Location = new System.Drawing.Point(92, 356);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(161, 36);
             this.label5.TabIndex = 20;
@@ -327,7 +327,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(35, 522);
+            this.label9.Location = new System.Drawing.Point(79, 505);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(187, 36);
             this.label9.TabIndex = 20;
@@ -336,7 +336,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(309, 141);
+            this.pictureBox1.Location = new System.Drawing.Point(391, 141);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(745, 501);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -348,7 +348,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1075, 759);
+            this.ClientSize = new System.Drawing.Size(1191, 759);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);

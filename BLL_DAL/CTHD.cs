@@ -8,32 +8,42 @@ namespace BLL_DAL
 {
     public class CTHD
     {
+       
         HotelManagerDataContext db = new HotelManagerDataContext();
         public CTHD()
         {
-
+            
         }
 
-        public IQueryable GetCTHD()
+        public IQueryable getHD()
         {
-            var kq = from cthd in db.CHITIETHDs
-                     join hd in db.HOADONPHs on cthd.MAHD equals hd.MAHD
-                     join p in db.PHONGs on hd.MAPH equals p.MAPHONG
+            var hd = from hds in db.HOADONPHs
                      select new
                      {
-                         hd.MAHD,
-                         hd.MAPH,
-                         hd.MAKH,
-                         cthd.TONGTIENDV,
-                         cthd.TONGTIENPHONG,
-                         cthd.THANHTIEN
+                         hds.MAHD,
+                         hds.DONGIADV,
+                         hds.SOLUONGDV,
+                         hds.DONGIAP,
+                         hds.NGAYRA,
+                         hds.NGAYVAO
                      };
-            return kq;
+            return hd;
         }
-        public bool Add(string aMahd, string aMaph, string aTenkh, int aTTDV, int aTTP, int TT)
+
+        public IQueryable getTTTk()
         {
-            return true;
-                     
+            var tk = from tks in db.CHITIETHDs
+                     select new
+                     {
+                         tks.MAHD,
+                         tks.TONGTIENPHONG,
+                         tks.TONGTIENDV,
+                         tks.THANHTIEN
+                     };
+            return tk;
         }
+
+
+
     }
 }

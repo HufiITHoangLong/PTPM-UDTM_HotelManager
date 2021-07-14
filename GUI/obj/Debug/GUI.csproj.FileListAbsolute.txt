@@ -18,7 +18,6 @@ D:\hoc\HotelManager\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 D:\PTPM-UDTM_HotelManager\GUI\bin\Debug\GUI.exe.config
 D:\PTPM-UDTM_HotelManager\GUI\bin\Debug\GUI.exe
 D:\PTPM-UDTM_HotelManager\GUI\bin\Debug\GUI.pdb
-D:\PTPM-UDTM_HotelManager\GUI\bin\Debug\BLL_DAL.dll
 D:\PTPM-UDTM_HotelManager\GUI\bin\Debug\LibraryCustomControl.dll
 D:\PTPM-UDTM_HotelManager\GUI\bin\Debug\Syncfusion.Compression.Base.dll
 D:\PTPM-UDTM_HotelManager\GUI\bin\Debug\Syncfusion.DocIO.Base.dll
@@ -42,3 +41,7 @@ D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.exe
 D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.pdb
 D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.FormChiTietHD.resources
 D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\PTPM-UDTM_HotelManager\GUI\bin\Debug\BLL_DAL.dll
+D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.FormTK.resources
+D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\RdlCompile.cache
+D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\RdlCompile.compiled

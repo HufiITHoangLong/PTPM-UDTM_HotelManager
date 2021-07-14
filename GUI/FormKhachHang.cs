@@ -29,12 +29,12 @@ namespace GUI
             string thang = DateTime.Now.Month.ToString();
             string nam = DateTime.Now.Year.ToString();
             string diachi = "133, Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh";
-            string sotokhai = "TKYT01";
-            string hoten = txtHoTen.Text;
+            string SoToKhai = "TKYT01";
+            string HotenKH = txtHoTen.Text;
             string CMND = txtCMND.Text;
             string dienthoai = textBoxPhone1.Text;
-         
-            word.ToKhaiYTe(diachi, sotokhai , ngay, thang, nam, hoten, CMND, dienthoai);
+
+            word.ToKhaiYTe(diachi, SoToKhai, ngay, thang, nam, HotenKH, CMND, dienthoai);
         }
 
         private void FormKhachHang_Load(object sender, EventArgs e)
@@ -93,7 +93,7 @@ namespace GUI
             }
 
             DGVKhachHang.DataSource = kh.Add(txtMakhach.Text, txtHoTen.Text, txtCMND.Text, textBoxPhone1.Text, txtDiaChi.Text, txtGT.Text);
-            MessageBox.Show("Thêm phòng thành công");
+            MessageBox.Show("Thêm thành công");
             DGVKhachHang.DataSource = kh.GetDataKH();
             txtMakhach.Text = txtHoTen.Text = txtCMND.Text = textBoxPhone1.Text = txtDiaChi.Text = txtGT.Text = null;
         }
@@ -148,9 +148,7 @@ namespace GUI
                  textBoxPhone1.Text = r.Cells["DTHOAI"].Value.ToString();
                  txtDiaChi.Text = r.Cells["DCHI"].Value.ToString();
                  txtGT.Text = r.Cells["GIOITINH"].Value.ToString();
-             }
-              
-                
+             }                
         }
     }
 }
