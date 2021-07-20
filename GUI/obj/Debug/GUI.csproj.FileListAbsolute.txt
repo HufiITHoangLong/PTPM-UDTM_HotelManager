@@ -40,8 +40,9 @@ D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.exe
 D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.pdb
 D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.FormChiTietHD.resources
-D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 D:\PTPM-UDTM_HotelManager\GUI\bin\Debug\BLL_DAL.dll
 D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.FormTK.resources
 D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\RdlCompile.cache
 D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\RdlCompile.compiled
+D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.FormDichVu.resources
+D:\PTPM-UDTM_HotelManager\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache

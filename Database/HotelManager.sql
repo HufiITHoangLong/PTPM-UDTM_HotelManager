@@ -121,7 +121,7 @@ VALUES ('KH01', N'Nguyễn Văn Phú', '2509281932','Nam', '0985326741', N'Quậ
 INSERT INTO KHACHHANG
 VALUES ('KH05', N'Khách vãng lai', null, null, null,null)
 
-select * from HOADONPH
+select * from PHONG
 
 
 Create table CHITIETHD
@@ -135,10 +135,15 @@ Create table CHITIETHD
 
 DROP TABLE CHITIETHD
 
-select * from CHITIETHD
+UPDATE PHONG
+SET TRANGTHAI = 0
+WHERE TRANGTHAI = 1
 
+select * from DICHVU
  
-
+ select DONGIA 
+ FROM DICHVU
+ WHERE MADV = 'DV01'
 
 
 

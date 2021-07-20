@@ -106,7 +106,7 @@ namespace GUI
             ctnp.ShowDialog();
         }    
         private void button2_Click(object sender, EventArgs e)
-        {   
+        {
             this.Hide();
             FormChiTietHD fcthd = new FormChiTietHD();
             fcthd.ShowDialog();
@@ -124,6 +124,14 @@ namespace GUI
             this.Hide();
             FormChiTietHD fcthd = new FormChiTietHD();
             fcthd.ShowDialog();
+        }
+
+        private void quanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDichVu fdv = new FormDichVu();
+            fdv.ShowDialog();
+
         }
 
         }

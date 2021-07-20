@@ -211,6 +211,7 @@
             this.CBMADV.Name = "CBMADV";
             this.CBMADV.Size = new System.Drawing.Size(200, 24);
             this.CBMADV.TabIndex = 18;
+           
             // 
             // label3
             // 

@@ -57,6 +57,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.quanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -157,7 +158,8 @@
             this.quảnToolStripMenuItem,
             this.quảnLýNhânViênToolStripMenuItem,
             this.quảnLýKháchHàngToolStripMenuItem,
-            this.liênHệToolStripMenuItem});
+            this.liênHệToolStripMenuItem,
+            this.quanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1191, 28);
@@ -343,6 +345,13 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // quanToolStripMenuItem
+            // 
+            this.quanToolStripMenuItem.Name = "quanToolStripMenuItem";
+            this.quanToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.quanToolStripMenuItem.Text = "Quản lý dịch vụ";
+            this.quanToolStripMenuItem.Click += new System.EventHandler(this.quanToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -417,6 +426,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem quanToolStripMenuItem;
 
     }
 }

@@ -26,7 +26,7 @@
         <elementListCompartment Id="75fd0579-f933-4a85-88a7-bf3c1e4590d6" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 1.78929768880208); (3.5 : 1.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.78929768880208); (3.5 : 1.78929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/HotelManagerDataContext/LOAIPHONG/LOAIPHONG_PHONG" />
       <nodes>
         <classShapeMoniker Id="4ba10665-125e-4193-8a3c-d37475b5456c" />
@@ -45,21 +45,21 @@
         <elementListCompartment Id="1fc595ec-a68f-44ad-888f-2e82fdb920b2" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 5.83255126953125); (3.75 : 5.83255126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 5.83255126953125); (3.75 : 5.83255126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/HotelManagerDataContext/DICHVU/DICHVU_HOADONPH" />
       <nodes>
         <classShapeMoniker Id="aa948ea4-efb8-48a8-9825-c318c5c7ad3e" />
         <classShapeMoniker Id="9b884862-de74-4e93-9629-9d2523e2c2fb" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.875 : 4.98159912109375); (5.75 : 4.98159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.875 : 4.98159912109375); (5.75 : 4.98159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/HotelManagerDataContext/KHACHHANG/KHACHHANG_HOADONPH" />
       <nodes>
         <classShapeMoniker Id="f8e821ec-f0ab-43dc-bb35-5e536d821fff" />
         <classShapeMoniker Id="9b884862-de74-4e93-9629-9d2523e2c2fb" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.625 : 2.57859537760417); (4.625 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.625 : 2.57859537760417); (4.625 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/HotelManagerDataContext/PHONG/PHONG_HOADONPH" />
       <nodes>
         <classShapeMoniker Id="efdfe427-5964-40df-8ca1-b1ee6daef490" />

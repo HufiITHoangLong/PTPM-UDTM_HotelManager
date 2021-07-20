@@ -121,8 +121,7 @@ namespace GUI
             DGVNhanVien.DataSource = nv.GetData();
             TBUser.Text = tbPass.Text = tbHoTen.Text = textBoxPhone1.Text = TBDiaChi.Text = null;
             
-        }
-
+        }       
         private void DGVNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

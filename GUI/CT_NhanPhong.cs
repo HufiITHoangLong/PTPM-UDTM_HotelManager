@@ -40,7 +40,9 @@ namespace GUI
             CBBMAPhong.ValueMember = "MAPHONG";
             CBBMAPhong.DataSource = p.GetMP();
 
-            DGVNhanPhong.DataSource = hd.getData();       
+            DGVNhanPhong.DataSource = hd.getData();
+
+            txtDGDV.Text = "";
         }       
         private void BtnThem_Click(object sender, EventArgs e)
         {
@@ -91,13 +93,12 @@ namespace GUI
             }
 
             hd.Delete(txtMaHD.Text);
-            DGVNhanPhong.DataSource = hd.getData();
-            //string idp = CBBMAPhong.SelectedValue.ToString();
-            //var ttp = db.PHONGs.SingleOrDefault(x => x.MAPHONG == idp);
-            //ttp.TRANGTHAI = 0;
-            //db.SubmitChanges();
-            //CBBMAPhong.DataSource = p.GetMP();
+            DGVNhanPhong.DataSource = hd.getData();        
             MessageBox.Show("Xóa thành công");
+            string idp = CBBMAPhong.SelectedValue.ToString();
+            var ttp = db.PHONGs.SingleOrDefault(x => x.MAPHONG == idp);
+            ttp.TRANGTHAI = 0;
+            db.SubmitChanges();
             txtMaHD.Clear();
             txtSLDv.Clear();
             
@@ -144,6 +145,6 @@ namespace GUI
         private void button1_Click(object sender, EventArgs e)
         {
             
-        }   
+        }
     }
 }
